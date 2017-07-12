@@ -1,4 +1,4 @@
-cask 'vagrant-187' do
+cask 'vagrant187' do
   version '1.8.7'
   sha256 '14d68f599a620cf421838ed037f0a1c4467e1b67475deeff62330a21fda4937b'
 
