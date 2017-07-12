@@ -1,4 +1,4 @@
-class Vagrant < Formula
+class VagrantAT187 < Formula
   desc "Vagrant 1.8.7"
   version "1.8.7"
   homepage 'https://www.vagrantup.com/'
