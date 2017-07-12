@@ -1,4 +1,4 @@
-cask 'vagrant@1.9.5' do
+cask 'vagrant195' do
   version '1.9.5'
   sha256 'ac16217b114d8816264700e41114b62acd0c071d2699ae13954086ae3fcb151c'
 
