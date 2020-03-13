@@ -58,6 +58,29 @@ function generate_cask() {
     > "${CASKS_DIR}/${PRODUCT}@${VERSION}.rb"
 }
 
+function install_and_test_cask() {
+  # uninstall potentially previously installed version of Cask
+  brew cask uninstall --force "${1}@${2}"
+
+  # install Cask
+  brew cask install --force "${1}@${2}" || exit 1
+
+  # audit Cask
+  brew cask audit "${1}@${2}"
+
+  # compare installed version with expected version
+  EXPECTED_OUTPUT="${3}"
+  ACTUAL_OUTPUT="$(${1} --version)"
+
+  if [ "${EXPECTED_OUTPUT}" = "${ACTUAL_OUTPUT}" ]; then
+    echo "!!! Expected output matched actual output for ${VERSION}"
+    brew cask uninstall --force "${1}@${2}"
+  else
+    echo "XXX  Expected output did not match actual output for ${2} (got: ${ACTUAL_OUTPUT})"
+    exit 1
+  fi
+}
+
 function generate_formula() {
   if [[ -z ${1} || -z ${2} ]]; then
     # fail if required argument is unset
@@ -121,4 +144,29 @@ function generate_formula() {
     -e "s/%%ARCHITECTURE%%/${ARCHITECTURE}/g" \
     "${TEMPLATE_DIR}/${PRODUCT}.formula" \
     > "${FORMULA_DIR}/${PRODUCT}@${VERSION}.rb"
+}
+
+function install_and_test_formula() {
+  # uninstall potentially previously installed version of Formula
+  brew uninstall --force "${1}@${2}"
+
+  # install Formula
+  brew install --force "${1}@${2}" || exit 1
+
+  # audit Formula
+  brew audit --strict --online "${1}@${2}"
+
+  # compare installed version with expected version
+  EXPECTED_OUTPUT="${3}"
+
+  # only process first line of output, as other lines are not relevant
+  ACTUAL_OUTPUT=$(${1} --version | head -n 1)
+
+  if [[ ${ACTUAL_OUTPUT} == ${EXPECTED_OUTPUT}* ]]; then
+    echo "!!! Expected output matched actual output for ${VERSION}"
+    brew uninstall --force "${1}@${2}"
+  else
+    echo "XXX  Expected output did not match actual output for ${2} (got: ${ACTUAL_OUTPUT})"
+    exit 1
+  fi
 }
