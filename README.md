@@ -12,6 +12,7 @@
     - [Installing a Formula](#installing-a-formula)
   - [Contributing](#contributing)
     - [Adding or Updating Casks](#adding-or-updating-casks)
+    - [Adding or Updating Formulae](#adding-or-updating-formulae)
   - [Notes](#notes)
   - [Author Information](#author-information)
   - [License](#license)
@@ -33,6 +34,8 @@ Once the tap is installed, you will have access to the following applications an
 
 - Casks
   - Vagrant `>= 1.8.0` and `<= 2.2.7`
+- Formulae
+  - Consul `>= 1.0.0` and `<= 1.7.1`
 
 ### Installing a Cask
 
