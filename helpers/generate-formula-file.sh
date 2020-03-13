@@ -51,6 +51,7 @@ CLEAN_VERSION="${CLEAN_VERSION//+/x}"
 
 # replace lowercase strings with capitalized version
 CLEAN_VERSION="${CLEAN_VERSION//beta/Beta}"
+CLEAN_VERSION="${CLEAN_VERSION//rc/Rc}"
 #CLEAN_VERSION="${CLEAN_VERSION//ent/Ent}"
 
 # generate Cask file
