@@ -1,5 +1,19 @@
-- [ ] Have you checked to ensure there aren't other open [Pull Requests](https://github.com/cultivatedops/homebrew-hashicorp/pulls) for the same formula update/change?
-- [ ] Have you built your formula locally prior to submission with `brew install <formula>` (where `<formula>` is the name of the formula you're submitting)?
-- [ ] Does your submission pass `brew audit --strict --online <formula>` (after doing `brew install <formula>`)?
+<!-- Please provide a general summary of the pull request in the Title above -->
 
------
+# Added Cask(s) or Formula(e)
+
+- `product@x.y.z`
+
+<!-- Explain what you expect to happen -->
+
+Any other relevant environment information:
+
+```sh
+
+```
+
+# TODO
+
+- [ ] Checked open [Pull Requests](https://github.com/operatehappy/homebrew-hashicorp/pulls) for the same Cask or Formula update
+- [ ] Built the Cask or Formula locally and verified its installability
+- [ ] Audited the Cask or Formula using `brew cask audit product@x.y.z` or `brew audit --strict --online product@x.y.z` respectively
