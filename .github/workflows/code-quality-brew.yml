@@ -16,12 +16,24 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Run brew test-bot
+      - name: Set up brew test-bot environment
         run: |
-          set -e
           brew update
-          HOMEBREW_TAP_DIR="/usr/local/Homebrew/Library/Taps/operatehappy/homebrew-hashicorp"
           mkdir -p "${HOMEBREW_TAP_DIR}"
+
           rm -rf "${HOMEBREW_TAP_DIR}"
           ln -s "${PWD}" "${HOMEBREW_TAP_DIR}"
+        env:
+          HOMEBREW_TAP_DIR: "/usr/local/Homebrew/Library/Taps/operatehappy/homebrew-hashicorp"
+
+      - name: Run brew test-bot
+        run: |
           brew test-bot --fail-fast
+        env:
+          HOMEBREW_TAP_DIR: "/usr/local/Homebrew/Library/Taps/operatehappy/homebrew-hashicorp"
+
+      - name: Run brew cask audit
+        run: |
+          brew cask audit
+        env:
+          HOMEBREW_TAP_DIR: "/usr/local/Homebrew/Library/Taps/operatehappy/homebrew-hashicorp"
