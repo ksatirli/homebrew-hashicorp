@@ -16,4 +16,4 @@ Any other relevant environment information:
 
 - [ ] Checked open [Pull Requests](https://github.com/operatehappy/homebrew-hashicorp/pulls) for the same Cask update
 - [ ] Built the Cask locally and verified its installability
-- [ ] Audited the Cask using `brew cask audit product@x.y.z` or `brew audit --strict --online product@x.y.z` respectively
+- [ ] Audited the Cask using `brew cask audit product@x.y.z` or `brew cask audit product@x.y.z` respectively
