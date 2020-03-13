@@ -50,7 +50,17 @@ brew cask install vagrant@1.8.0
 
 ### Installing a Formula
 
-TODO
+Once the Tap is installed, you can use the [brew install](https://docs.brew.sh/Homebrew-on-Linux#install) commands to install a Bottle:
+
+```sh
+brew install product@X.Y.Z
+```
+
+For example, to install _Consul 1.4.0_  you would use the following:
+
+```sh
+brew install consul@1.4.0
+```
 
 ## Contributing
 
@@ -82,7 +92,31 @@ Your contribution may pertain to a different product and version, but the steps 
 
 - Uninstall the new version using `brew cask uninstall vagrant@1.9.9`
 
-- Optional, but highly recommended: use `helpers/install-casks.sh` to  verify installability of _all_ currently generated Casks
+- Optional, but highly recommended: use `helpers/install-casks.sh` to verify installability of _all_ currently generated Casks
+
+- Optionally, but highly recommended: lint your contribution using [RuboCop](https://www.rubocop.org)
+
+### Adding or Updating Formulae
+
+In the following example, the steps reference a (currently unreleased) version of Consul `1.4.9` and a previously installed version of Consul `1.4.8`.
+
+Your contribution may pertain to a different product and version, but the steps remain alike:
+
+- Edit the `CONSUL_14X` variable in `helpers/VERSIONS.sh` and add an entry of `"1.4.9"`
+
+- Generate a Formula file for this version, using `helpers/generate-formulae.sh`
+
+- The `generate-formulae.sh` helper will parse the `helpers/VERSION.sh` file and retrieve the _checksum_ for Consul `1.4.9`
+
+- Copy the generated Formula files to `$(brew --repo)/Library/Taps/operatehappy/homebrew-hashicorp/Formula/)`
+
+- Uninstall the previously installed version of Consul using `brew formula uninstall consul@1.4.8`
+
+- Install the new version using `brew cask install consul@1.4.9`
+
+- Uninstall the new version using `brew cask uninstall consul@1.4.9`
+
+- Optional, but highly recommended: use `helpers/install-formulae.sh` to verify installability of _all_ currently generated Formulae
 
 - Optionally, but highly recommended: lint your contribution using [RuboCop](https://www.rubocop.org)
 
