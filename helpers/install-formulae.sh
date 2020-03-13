@@ -2,9 +2,6 @@
 
 set -e
 
-# shellcheck source=./helpers/VERSIONS.sh
-. "./helpers/VERSIONS.sh"
-
 # shellcheck source=./helpers/FUNCTIONS.sh
 . "./helpers/FUNCTIONS.sh"
 
