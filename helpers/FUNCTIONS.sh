@@ -53,24 +53,30 @@ function generate_cask() {
 }
 
 function install_and_test_cask() {
+  local PRODUCT="${1}"
+  local VERSION="${2}"
+  local EXPECTED_OUTPUT="${3}"
+
   # uninstall potentially previously installed version of Cask
-  brew cask uninstall --force "${1}@${2}"
+  brew cask uninstall --force "${PRODUCT}@${VERSION}"
 
   # install Cask
-  brew cask install --force "${1}@${2}" || exit 1
+  brew cask install --force "${PRODUCT}@${VERSION}"
 
   # audit Cask
-  brew cask audit "${1}@${2}"
+  brew cask audit "${PRODUCT}@${VERSION}"
+
+  # check Cask style
+  brew cask style "${PRODUCT}@${VERSION}"
 
   # compare installed version with expected version
-  EXPECTED_OUTPUT="${3}"
-  ACTUAL_OUTPUT="$(${1} --version)"
+  ACTUAL_OUTPUT="$(${PRODUCT} --version)"
 
-  if [ "${EXPECTED_OUTPUT}" = "${ACTUAL_OUTPUT}" ]; then
+  if [[ ${ACTUAL_OUTPUT} == ${EXPECTED_OUTPUT}* ]]; then
     echo "!!! Expected output matched actual output for ${VERSION}"
-    brew cask uninstall --force "${1}@${2}"
+    brew cask uninstall --force "${PRODUCT}@${VERSION}"
   else
-    echo "XXX  Expected output did not match actual output for ${2} (got: ${ACTUAL_OUTPUT})"
+    echo "XXX  Expected output did not match actual output for \"${EXPECTED_OUTPUT}\" (got: ${ACTUAL_OUTPUT})"
     exit 1
   fi
 }
