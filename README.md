@@ -9,10 +9,8 @@
   - [Requirements](#requirements)
   - [Usage](#usage)
     - [Installing a Cask](#installing-a-cask)
-    - [Installing a Formula](#installing-a-formula)
   - [Contributing](#contributing)
     - [Adding or Updating Casks](#adding-or-updating-casks)
-    - [Adding or Updating Formulae](#adding-or-updating-formulae)
   - [Notes](#notes)
   - [Author Information](#author-information)
   - [License](#license)
@@ -33,9 +31,8 @@ brew tap operatehappy/homebrew-hashicorp
 Once the tap is installed, you will have access to the following applications and versions
 
 - Casks
-  - Vagrant `>= 1.8.0` and `<= 2.2.7`
-- Formulae
   - Consul `>= 1.0.0` and `<= 1.7.1`
+  - Vagrant `>= 1.8.0` and `<= 2.2.7`
 
 ### Installing a Cask
 
@@ -51,25 +48,11 @@ For example, to install _Vagrant 1.8.0_  you would use the following:
 brew cask install vagrant@1.8.0
 ```
 
-### Installing a Formula
-
-Once the Tap is installed, you can use the [brew install](https://docs.brew.sh/Homebrew-on-Linux#install) commands to install a Bottle:
-
-```sh
-brew install product@X.Y.Z
-```
-
-For example, to install _Consul 1.4.0_  you would use the following:
-
-```sh
-brew install consul@1.4.0
-```
-
 ## Contributing
 
-This repository includes _helpers_ that assist with the generation of _Cask_ and _Formula_ files.
+This repository includes _helpers_ that assist with the generation of _Cask_ and files.
 
-Both Casks and Formula generators source `helpers/VERSIONS.sh` for rendering of the templates available in `helpers/templates`
+The generators source `helpers/VERSIONS.sh` for rendering of the templates available in `helpers/templates`
 
 Start by editing `helpers/VERSIONS.sh` and expanding the variable that best reflects the version you are looking to add.
 
@@ -97,31 +80,7 @@ Your contribution may pertain to a different product and version, but the steps 
 
 - Optional, but highly recommended: use `helpers/install-casks.sh` to verify installability of _all_ currently generated Casks
 
-- Optionally, but highly recommended: lint your contribution using [RuboCop](https://www.rubocop.org)
-
-### Adding or Updating Formulae
-
-In the following example, the steps reference a (currently unreleased) version of Consul `1.4.9` and a previously installed version of Consul `1.4.8`.
-
-Your contribution may pertain to a different product and version, but the steps remain alike:
-
-- Edit the `CONSUL_14X` variable in `helpers/VERSIONS.sh` and add an entry of `"1.4.9"`
-
-- Generate a Formula file for this version, using `helpers/generate-formulae.sh`
-
-- The `generate-formulae.sh` helper will parse the `helpers/VERSION.sh` file and retrieve the _checksum_ for Consul `1.4.9`
-
-- Copy the generated Formula files to `$(brew --repo)/Library/Taps/operatehappy/homebrew-hashicorp/Formula/)`
-
-- Uninstall the previously installed version of Consul using `brew formula uninstall consul@1.4.8`
-
-- Install the new version using `brew cask install consul@1.4.9`
-
-- Uninstall the new version using `brew cask uninstall consul@1.4.9`
-
-- Optional, but highly recommended: use `helpers/install-formulae.sh` to verify installability of _all_ currently generated Formulae
-
-- Optionally, but highly recommended: lint your contribution using [RuboCop](https://www.rubocop.org)
+- Optionally, but highly recommended: lint your contribution using `brew style` and [RuboCop](https://www.rubocop.org)
 
 ## Notes
 
