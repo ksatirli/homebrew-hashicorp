@@ -1,6 +1,6 @@
-cask "vagrant@1.8.0" do
-  version "1.8.0"
-  sha256 "cfc63e433c9aef61384175b263dea081f8b570b6a3e69edd0b77c47c96dce84d"
+cask "vagrant@1.9.2" do
+  version "1.9.2"
+  sha256 "ee0549a16859042d39c08ae153895da6cdfbad7c587b3438349cdf01efe10703"
 
   url "https://releases.hashicorp.com/vagrant/#{version}/vagrant_#{version}.dmg"
   appcast "https://github.com/hashicorp/vagrant/releases.atom"

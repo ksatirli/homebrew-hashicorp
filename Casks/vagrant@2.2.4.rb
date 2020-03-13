@@ -1,13 +1,13 @@
-cask "vagrant@1.8.0" do
-  version "1.8.0"
-  sha256 "cfc63e433c9aef61384175b263dea081f8b570b6a3e69edd0b77c47c96dce84d"
+cask "vagrant@2.2.4" do
+  version "2.2.4"
+  sha256 "a09a2f0fb3fcbd4cfb41c7812c01605173f64056449c3dbcc513b4211e9c1e8d"
 
-  url "https://releases.hashicorp.com/vagrant/#{version}/vagrant_#{version}.dmg"
+  url "https://releases.hashicorp.com/vagrant/#{version}/vagrant_#{version}_x86_64.dmg"
   appcast "https://github.com/hashicorp/vagrant/releases.atom"
   name "Vagrant"
   homepage "https://www.vagrantup.com/"
 
-  pkg "vagrant.pkg", allow_untrusted: true
+  pkg "vagrant.pkg"
 
   uninstall script: {
     executable: "uninstall.tool",
