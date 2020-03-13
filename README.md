@@ -1,6 +1,6 @@
 # Homebrew: HashiCorp
 
-> Homebrew Tap for the HashiCorp Suite of Tools
+> Homebrew Tap for HashiCorp Suite of Tools
 
 ## Table of Contents
 
