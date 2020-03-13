@@ -1,6 +1,6 @@
 ---
 name: Bug
-about: A bug or problem with a Cask or Formula
+about: A bug or problem with a Cask
 labels: bug
 ---
 
