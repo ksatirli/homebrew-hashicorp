@@ -6,8 +6,5 @@ TEMPLATE_DIR="./helpers/templates"
 CASKS_DIR="./Casks"
 FORMULA_DIR="./Formula"
 
-FORMULA_ARCHITECTURE="_darwin_amd64"
-CASK_ARCHITECTURE="_x86_64"
-
 # shellcheck source=./helpers/VERSIONS.sh
 . "./helpers/VERSIONS.sh"

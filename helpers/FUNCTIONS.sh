@@ -6,27 +6,21 @@ set -e
 . "./helpers/CONFIG.sh"
 
 function generate_cask() {
+  local PRODUCT="${1}"
+  local VERSION="${2}"
+  local EXTENSION="${3}"
+  local ARCHITECTURE="${4}"
+  local PACKAGE_FLAGS="${5}"
+
   # fail if required argument is unset
-  if [[ -z ${1} || -z ${2} ]]; then
-    echo "missing positional argument #1 or #2"
+  if [[ -z ${PRODUCT} || -z ${VERSION} || -z ${EXTENSION} || -z ${ARCHITECTURE} ]]; then
+    echo "missing positional argument"
     exit 1
-  else
-    PRODUCT="${1}"
-    VERSION="${2}"
   fi
 
   # omit architecture string if positional argument calls for it
-  if [[ -n ${3} && ${3} == "omit" ]]; then
+  if [[ -n ${ARCHITECTURE} && ${ARCHITECTURE} == "omit" ]]; then
     ARCHITECTURE=""
-  elif [[ -n ${3} && ${3} != "omit" ]]; then
-    ARCHITECTURE="${3}"
-  fi
-
-  # Vagrant < 2.x.x requires untrusted packages to be trusted
-  if [[ ${PRODUCT} == "vagrant" && ${VERSION} < "2.0.0" ]]; then
-    PACKAGE_FLAG=", allow_untrusted: true"
-  else
-    PACKAGE_FLAG=""
   fi
 
   echo "generating Cask for ${PRODUCT}_${VERSION}${ARCHITECTURE}"
@@ -38,7 +32,7 @@ function generate_cask() {
     --silent \
     "${BASE_URL}/${PRODUCT}/${VERSION}/${PRODUCT}_${VERSION}_SHA256SUMS" |
     grep \
-      "  ${PRODUCT}_${VERSION}${ARCHITECTURE}.dmg" |
+      "  ${PRODUCT}_${VERSION}${ARCHITECTURE}.${EXTENSION}" |
     cut \
       -f 1 \
       -d " ")"
