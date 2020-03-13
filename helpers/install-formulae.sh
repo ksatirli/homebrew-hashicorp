@@ -21,7 +21,7 @@ function install_and_test_formula() {
   # only process first line of output, as other lines are not relevant
   ACTUAL_OUTPUT=$(${1} --version | head -n 1)
 
-  if [[ "${ACTUAL_OUTPUT}" == ${EXPECTED_OUTPUT}* ]]; then
+  if [[ ${ACTUAL_OUTPUT} == ${EXPECTED_OUTPUT}* ]]; then
     echo "!!! Expected output matched actual output for ${VERSION}"
     brew uninstall --force "${1}@${2}"
   else
