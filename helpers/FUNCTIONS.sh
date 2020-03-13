@@ -47,7 +47,7 @@ function generate_cask() {
     -e "s/%%VERSION%%/${VERSION}/g" \
     -e "s/%%CHECKSUM%%/${CHECKSUM}/g" \
     -e "s/%%ARCHITECTURE%%/${ARCHITECTURE}/g" \
-    -e "s/%%PACKAGE_FLAG%%/${PACKAGE_FLAG}/g" \
+    -e "s/%%PACKAGE_FLAG%%/${PACKAGE_FLAGS}/g" \
     "${TEMPLATE_DIR}/${PRODUCT}.cask" \
     > "${CASKS_DIR}/${PRODUCT}@${VERSION}.rb"
 }
