@@ -9,6 +9,7 @@
   - [Requirements](#requirements)
   - [Usage](#usage)
     - [Installing a Cask](#installing-a-cask)
+    - [Installing a Formula](#installing-a-formula)
   - [Contributing](#contributing)
     - [Adding or Updating Casks](#adding-or-updating-casks)
   - [Notes](#notes)
@@ -46,6 +47,8 @@ For example, to install _Vagrant 1.8.0_  you would use the following:
 ```sh
 brew cask install vagrant@1.8.0
 ```
+
+### Installing a Formula
 
 TODO
 
@@ -99,6 +102,7 @@ Development of this module was sponsored by [Operate Happy](https://github.com/o
 
 Additionally, a special thanks goes out to the contributors of Brew's `homebrew-core` formulae:
 
+- [consul.rb](https://github.com/Homebrew/homebrew-core/commits/master/Formula/consul.rb)
 - [vagrant.rb](https://github.com/Homebrew/homebrew-core/commits/master/Formula/vagrant.rb)
 
 ## License
