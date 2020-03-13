@@ -1,0 +1,14 @@
+cask "consul@%%VERSION%%" do
+  version "%%VERSION%%"
+  sha256 "%%CHECKSUM%%"
+
+  # releases.hashicorp.com was verified as official when first introduced to the cask
+  url "https://releases.hashicorp.com/consul/%%VERSION%%/consul_%%VERSION%%%%ARCHITECTURE%%.zip"
+  appcast "https://github.com/hashicorp/consul/releases.atom"
+  name "Consul"
+  homepage "https://www.consul.io/"
+
+  auto_updates false
+
+  binary "consul"
+end
