@@ -66,7 +66,7 @@ Your contribution may pertain to a different product and version, but the steps 
 
 - Edit the `VAGRANT_19X_64BIT` variable in `helpers/VERSIONS.sh` and add an entry of `"1.9.9"`
 
-- Generate a Cask file for this version, using `helpers/generate-casks.sh`
+- Generate a Cask file for this version, using `helpers/generate-casks.sh vagrant`
 
 - The `generate-casks.sh` helper will parse the `helpers/VERSION.sh` file and retrieve the _checksum_ for Vagrant `1.9.9`
 
@@ -78,7 +78,7 @@ Your contribution may pertain to a different product and version, but the steps 
 
 - Uninstall the new version using `brew cask uninstall vagrant@1.9.9`
 
-- Optional, but highly recommended: use `helpers/install-casks.sh` to verify installability of _all_ currently generated Casks
+- Optional, but highly recommended: use `helpers/install-casks.sh vagrant` to verify installability of _all_ currently generated Casks
 
 - Optionally, but highly recommended: lint your contribution using `brew cask style`
 
