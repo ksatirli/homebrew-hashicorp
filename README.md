@@ -80,15 +80,13 @@ Your contribution may pertain to a different product and version, but the steps 
 
 - Optional, but highly recommended: use `helpers/install-casks.sh` to verify installability of _all_ currently generated Casks
 
-- Optionally, but highly recommended: lint your contribution using `brew style` and [RuboCop](https://www.rubocop.org)
+- Optionally, but highly recommended: lint your contribution using `brew cask style`
 
 ## Notes
 
 - An exhaustive list of versions, is available via [helpers/VERSIONS.sh](https://github.com/operatehappy/homebrew-hashicorp/blob/master/helpers/VERSIONS.sh)
 
 - Vagrant switched from a _32-bit_ architecture to a _64-bit_ one after version `1.9.2`
-
-- The [operatehappy/dotfiles-org](https://github.com/operatehappy/dotfiles-org) repository includes a _RuboCop_ configuration that can be used with Casks and Formulae
 
 ## Author Information
 
