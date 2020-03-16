@@ -97,6 +97,7 @@ Development of this module was sponsored by [Operate Happy](https://github.com/o
 Additionally, a special thanks goes out to the contributors of Brew's `homebrew-core` formulae:
 
 - [consul.rb](https://github.com/Homebrew/homebrew-core/commits/master/Formula/consul.rb)
+- [nomad.rb](https://github.com/Homebrew/homebrew-core/commits/master/Formula/nomad.rb)
 - [vagrant.rb](https://github.com/Homebrew/homebrew-core/commits/master/Formula/vagrant.rb)
 
 ## License
