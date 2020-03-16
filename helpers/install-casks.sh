@@ -13,6 +13,13 @@ case "${1}" in
     done
     ;;
 
+  nomad)
+    echo "Installing Nomad 0.x.x versions"
+    for VERSION in "${NOMAD_0XX[@]}"; do
+      install_and_test_cask "nomad" "${VERSION}" "Nomad v${VERSION}"
+    done
+    ;;
+
   vagrant)
     echo "Installing Vagrant 1.x.x versions"
     for VERSION in "${VAGRANT_1XX[@]}"; do
