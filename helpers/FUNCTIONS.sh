@@ -11,6 +11,7 @@ function generate_cask() {
   local EXTENSION="${3}"
   local ARCHITECTURE="${4}"
   local PACKAGE_FLAGS="${5}"
+  local CHECKSUMPREFIX="${6}"
 
   # fail if required argument is unset
   if [[ -z ${PRODUCT} || -z ${VERSION} || -z ${EXTENSION} || -z ${ARCHITECTURE} ]]; then
@@ -32,7 +33,7 @@ function generate_cask() {
     --silent \
     "${BASE_URL}/${PRODUCT}/${VERSION}/${PRODUCT}_${VERSION}_SHA256SUMS" |
     grep \
-      "  ${PRODUCT}_${VERSION}${ARCHITECTURE}.${EXTENSION}" |
+      "  ${CHECKSUMPREFIX}${PRODUCT}_${VERSION}${ARCHITECTURE}.${EXTENSION}" |
     cut \
       -f 1 \
       -d " ")"
