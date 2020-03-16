@@ -1,6 +1,6 @@
 # Homebrew: HashiCorp
 
-> Homebrew Tap for the HashiCorp Suite of Tools
+> Homebrew Tap for HashiCorp Suite of Tools
 
 ## Table of Contents
 
@@ -31,6 +31,7 @@ brew tap operatehappy/homebrew-hashicorp
 Once the tap is installed, you will have access to the following applications and versions
 
 - Casks
+  - Consul `>= 1.0.0` and `<= 1.7.1`
   - Vagrant `>= 1.8.0` and `<= 2.2.7`
 
 ### Installing a Cask
@@ -47,13 +48,11 @@ For example, to install _Vagrant 1.8.0_  you would use the following:
 brew cask install vagrant@1.8.0
 ```
 
-TODO
-
 ## Contributing
 
-This repository includes _helpers_ that assist with the generation of _Cask_ and _Formula_ files.
+This repository includes _helpers_ that assist with the generation of _Cask_ and files.
 
-Both Casks and Formula generators source `helpers/VERSIONS.sh` for rendering of the templates available in `helpers/templates`
+The generators source `helpers/VERSIONS.sh` for rendering of the templates available in `helpers/templates`
 
 Start by editing `helpers/VERSIONS.sh` and expanding the variable that best reflects the version you are looking to add.
 
@@ -79,9 +78,9 @@ Your contribution may pertain to a different product and version, but the steps 
 
 - Uninstall the new version using `brew cask uninstall vagrant@1.9.9`
 
-- Optional, but highly recommended: use `helpers/install-casks.sh` to  verify installability of _all_ currently generated Casks
+- Optional, but highly recommended: use `helpers/install-casks.sh` to verify installability of _all_ currently generated Casks
 
-- Optionally, but highly recommended: lint your contribution using [RuboCop](https://www.rubocop.org)
+- Optionally, but highly recommended: lint your contribution using `brew style` and [RuboCop](https://www.rubocop.org)
 
 ## Notes
 
@@ -99,6 +98,7 @@ Development of this module was sponsored by [Operate Happy](https://github.com/o
 
 Additionally, a special thanks goes out to the contributors of Brew's `homebrew-core` formulae:
 
+- [consul.rb](https://github.com/Homebrew/homebrew-core/commits/master/Formula/consul.rb)
 - [vagrant.rb](https://github.com/Homebrew/homebrew-core/commits/master/Formula/vagrant.rb)
 
 ## License

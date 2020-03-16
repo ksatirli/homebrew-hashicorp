@@ -4,3 +4,6 @@
 BASE_URL="https://releases.hashicorp.com"
 TEMPLATE_DIR="./helpers/templates"
 CASKS_DIR="./Casks"
+
+# shellcheck source=./helpers/VERSIONS.sh
+. "./helpers/VERSIONS.sh"
