@@ -9,8 +9,7 @@ cask 'vault@0.8.0-rc1' do
   homepage 'https://www.vaultproject.io/'
 
   auto_updates false
+  conflicts_with formula: 'vault'
 
   binary 'vault'
-
-  conflicts_with formula: 'vault'
 end
