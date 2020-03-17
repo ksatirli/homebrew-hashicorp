@@ -15,7 +15,7 @@ case "${1}" in
 
   envconsul)
     echo "Installing envconsul 0.x.x versions"
-    for VERSION in "${CONSUL_1XX[@]}"; do
+    for VERSION in "${ENVCONSUL_0XX[@]}"; do
       install_and_test_cask "envconsul" "${VERSION}"
     done
     ;;

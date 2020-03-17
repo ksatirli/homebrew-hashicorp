@@ -76,7 +76,7 @@ ENVCONSUL_03X=("0.3.0")
 ENVCONSUL_04X=("0.4.1")
 
 # released in 2015-02
-ENVCONSUL_01X=("0.5.0")
+ENVCONSUL_05X=("0.5.0")
 
 # released between 2015-10 and 2017-01
 ENVCONSUL_06X=("0.6.0" "0.6.1" "0.6.2")
@@ -90,7 +90,7 @@ ENVCONSUL_08X=("0.8.0")
 # released between 2019-08 and 2020-01
 ENVCONSUL_09X=("0.9.0" "0.9.1" "0.9.2")
 
-ENVCONSUL_0XX=("${ENVCONSUL_01X[@]}" "${ENVCONSUL_02X[@]}" "${ENVCONSUL_03X[@]}" "${ENVCONSUL_04X[@]}" "${ENVCONSUL_01X[@]}" "${ENVCONSUL_06X[@]}" "${ENVCONSUL_07X[@]}" "${ENVCONSUL_08X[@]}" "${ENVCONSUL_09X[@]}")
+ENVCONSUL_0XX=("${ENVCONSUL_01X[@]}" "${ENVCONSUL_02X[@]}" "${ENVCONSUL_03X[@]}" "${ENVCONSUL_04X[@]}" "${ENVCONSUL_05X[@]}" "${ENVCONSUL_06X[@]}" "${ENVCONSUL_07X[@]}" "${ENVCONSUL_08X[@]}" "${ENVCONSUL_09X[@]}")
 
 ########################################################################################################################
 #     NOMAD                                                                                                            #

@@ -5,7 +5,7 @@ cask 'envconsul@%%PRODUCT_VERSION%%' do
   # releases.hashicorp.com was verified as official when first introduced to the cask
   url 'https://releases.hashicorp.com/envconsul/%%PRODUCT_VERSION%%/envconsul_%%PRODUCT_VERSION%%%%PRODUCT_ARCHITECTURE%%.%%PRODUCT_FILE_EXTENSION%%'
   appcast 'https://github.com/hashicorp/envconsul/releases.atom'
-  name 'Consul'
+  name 'envconsul'
   homepage 'https://github.com/hashicorp/envconsul'
 
   auto_updates false
