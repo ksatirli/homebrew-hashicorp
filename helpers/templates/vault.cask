@@ -1,16 +1,15 @@
-cask 'vault@%%VERSION%%' do
-  version '%%VERSION%%'
-  sha256 '%%CHECKSUM%%'
+cask 'vault@%%PRODUCT_VERSION%%' do
+  version '%%PRODUCT_VERSION%%'
+  sha256 '%%PRODUCT_CHECKSUM%%'
 
   # releases.hashicorp.com was verified as official when first introduced to the cask
-  url 'https://releases.hashicorp.com/vault/%%VERSION%%/vault_%%VERSION%%%%ARCHITECTURE%%.zip'
+  url 'https://releases.hashicorp.com/vault/%%PRODUCT_VERSION%%/vault_%%PRODUCT_VERSION%%%%PRODUCT_ARCHITECTURE%%.%%PRODUCT_FILE_EXTENSION%%'
   appcast 'https://github.com/hashicorp/vault/releases.atom'
   name 'Vault'
   homepage 'https://www.vaultproject.io/'
 
   auto_updates false
+  conflicts_with formula: 'vault'
 
   binary 'vault'
-
-  conflicts_with formula: 'vault'
 end
