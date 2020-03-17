@@ -1,20 +1,22 @@
-cask "vagrant@%%VERSION%%" do
-  version "%%VERSION%%"
-  sha256 "%%CHECKSUM%%"
+cask 'vagrant@%%VERSION%%' do
+  version '%%VERSION%%'
+  sha256 '%%CHECKSUM%%'
 
-  url "https://releases.hashicorp.com/vagrant/#{version}/vagrant_#{version}%%ARCHITECTURE%%.dmg"
-  appcast "https://github.com/hashicorp/vagrant/releases.atom"
-  name "Vagrant"
-  homepage "https://www.vagrantup.com/"
+  # releases.hashicorp.com/vagrant was verified as official when first introduced to the cask
+  url 'https://releases.hashicorp.com/vagrant/%%VERSION%%/vagrant_%%VERSION%%%%ARCHITECTURE%%.dmg'
+  appcast 'https://github.com/hashicorp/vagrant/releases.atom'
+  name 'Vagrant'
+  homepage 'https://www.vagrantup.com/'
 
-  pkg "vagrant.pkg"%%PACKAGE_FLAG%%
+  pkg 'vagrant.pkg'%%PACKAGE_FLAG%%
 
-  uninstall script: {
-    executable: "uninstall.tool",
-    input: ["Yes"],
-    sudo: true
-  },
-            pkgutil: "com.vagrant.vagrant"
+  uninstall script:  {
+                       executable: 'uninstall.tool',
+                       input:      ['Yes'],
+                       sudo:       true,
+                     },
 
-  zap trash: "~/.vagrant.d"
+            pkgutil: 'com.vagrant.vagrant'
+
+  zap trash: '~/.vagrant.d'
 end
