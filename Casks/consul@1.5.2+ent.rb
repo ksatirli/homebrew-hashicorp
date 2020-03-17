@@ -9,6 +9,7 @@ cask 'consul@1.5.2+ent' do
   homepage 'https://www.consul.io/'
 
   auto_updates false
+  conflicts_with formula: 'consul'
 
   binary 'consul'
 end
