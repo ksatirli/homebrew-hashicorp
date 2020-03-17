@@ -1,14 +1,15 @@
-cask 'nomad@%%VERSION%%' do
-  version '%%VERSION%%'
-  sha256 '%%CHECKSUM%%'
+cask 'nomad@%%PRODUCT_VERSION%%' do
+  version '%%PRODUCT_VERSION%%'
+  sha256 '%%PRODUCT_CHECKSUM%%'
 
   # releases.hashicorp.com was verified as official when first introduced to the cask
-  url 'https://releases.hashicorp.com/nomad/%%VERSION%%/nomad_%%VERSION%%%%ARCHITECTURE%%.zip'
+  url 'https://releases.hashicorp.com/nomad/%%PRODUCT_VERSION%%/nomad_%%PRODUCT_VERSION%%%%PRODUCT_ARCHITECTURE%%.%%PRODUCT_FILE_EXTENSION%%'
   appcast 'https://github.com/hashicorp/nomad/releases.atom'
   name 'Nomad'
   homepage 'https://www.nomadproject.io/'
 
   auto_updates false
+  conflicts_with formula: 'nomad'
 
   binary 'nomad'
 end

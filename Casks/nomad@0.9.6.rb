@@ -9,6 +9,7 @@ cask 'nomad@0.9.6' do
   homepage 'https://www.nomadproject.io/'
 
   auto_updates false
+  conflicts_with formula: 'nomad'
 
   binary 'nomad'
 end
