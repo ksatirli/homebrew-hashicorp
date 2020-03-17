@@ -1,0 +1,15 @@
+cask 'vault@1.1.0-beta2' do
+  version '1.1.0-beta2'
+  sha256 '72cb47830b6784e78eead1987be5340101f80b432b2ed36be80e8745357cb578'
+
+  # releases.hashicorp.com was verified as official when first introduced to the cask
+  url 'https://releases.hashicorp.com/vault/1.1.0-beta2/vault_1.1.0-beta2_darwin_amd64.zip'
+  appcast 'https://github.com/hashicorp/vault/releases.atom'
+  name 'Vault'
+  homepage 'https://www.vaultproject.io/'
+
+  auto_updates false
+  conflicts_with formula: 'vault'
+
+  binary 'vault'
+end

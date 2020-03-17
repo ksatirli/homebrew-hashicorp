@@ -6,78 +6,75 @@ set -e
 . "./helpers/CONFIG.sh"
 
 function generate_cask() {
-  local PRODUCT="${1}"
-  local VERSION="${2}"
-  local EXTENSION="${3}"
-  local ARCHITECTURE="${4}"
-  local PACKAGE_FLAGS="${5}"
-  local CHECKSUMPREFIX="${6}"
+  local PRODUCT_NAME="${1}"
+  local PRODUCT_VERSION="${2}"
+  local PRODUCT_FILE_EXTENSION="${3}"
+  local PRODUCT_ARCHITECTURE="${4}"
+  local PRODUCT_FLAGS="${5}"
+  local PRODUCT_CHECKSUM_PREFIX="${6}"
 
   # fail if required argument is unset
-  if [[ -z ${PRODUCT} || -z ${VERSION} || -z ${EXTENSION} || -z ${ARCHITECTURE} ]]; then
+  if [[ -z ${PRODUCT_NAME} || -z ${PRODUCT_VERSION} || -z ${PRODUCT_FILE_EXTENSION} || -z ${PRODUCT_ARCHITECTURE} ]]; then
     echo "missing positional argument"
     exit 1
   fi
 
-  # omit architecture string if positional argument calls for it
-  if [[ -n ${ARCHITECTURE} && ${ARCHITECTURE} == "omit" ]]; then
-    ARCHITECTURE=""
+  # omit PRODUCT_ARCHITECTURE string if positional argument calls for it
+  if [[ -n ${PRODUCT_ARCHITECTURE} && ${PRODUCT_ARCHITECTURE} == "omit" ]]; then
+    PRODUCT_ARCHITECTURE=""
   fi
 
-  echo "generating Cask for ${PRODUCT}_${VERSION}${ARCHITECTURE}"
+  echo "generating Cask for ${PRODUCT_NAME}_${PRODUCT_VERSION}${PRODUCT_ARCHITECTURE}"
 
   # fetch checksums file and assign value to variable
-  CHECKSUM="$(curl \
+  PRODUCT_CHECKSUM="$(curl \
     --get \
     --location \
     --silent \
-    "${BASE_URL}/${PRODUCT}/${VERSION}/${PRODUCT}_${VERSION}_SHA256SUMS" |
+    "https://releases.hashicorp.com/${PRODUCT_NAME}/${PRODUCT_VERSION}/${PRODUCT_NAME}_${PRODUCT_VERSION}_SHA256SUMS" |
     grep \
-      "  ${CHECKSUMPREFIX}${PRODUCT}_${VERSION}${ARCHITECTURE}.${EXTENSION}" |
+      "  ${PRODUCT_CHECKSUM_PREFIX}${PRODUCT_NAME}_${PRODUCT_VERSION}${PRODUCT_ARCHITECTURE}.${PRODUCT_FILE_EXTENSION}" |
     cut \
       -f 1 \
       -d " ")"
 
-  if [[ -z ${CHECKSUM} ]]; then
+  if [[ -z ${PRODUCT_CHECKSUM} ]]; then
     echo "unable to set CHECKSUM"
     exit 1
   fi
 
   # generate Cask file
   sed \
-    -e "s/%%VERSION%%/${VERSION}/g" \
-    -e "s/%%CHECKSUM%%/${CHECKSUM}/g" \
-    -e "s/%%ARCHITECTURE%%/${ARCHITECTURE}/g" \
-    -e "s/%%PACKAGE_FLAG%%/${PACKAGE_FLAGS}/g" \
-    "${TEMPLATE_DIR}/${PRODUCT}.cask" \
-    > "${CASKS_DIR}/${PRODUCT}@${VERSION}.rb"
+    -e "s/%%PRODUCT_VERSION%%/${PRODUCT_VERSION}/g" \
+    -e "s/%%PRODUCT_CHECKSUM%%/${PRODUCT_CHECKSUM}/g" \
+    -e "s/%%PRODUCT_CHECKSUM%%/${PRODUCT_CHECKSUM}/g" \
+    -e "s/%%PRODUCT_ARCHITECTURE%%/${PRODUCT_ARCHITECTURE}/g" \
+    -e "s/%%PRODUCT_FILE_EXTENSION%%/${PRODUCT_FILE_EXTENSION}/g" \
+    -e "s/%%PRODUCT_FLAGS%%/${PRODUCT_FLAGS}/g" \
+    "./helpers/templates/${PRODUCT_NAME}.cask" \
+    > "${GENERATED_CASKS_DIR}/${PRODUCT_NAME}@${PRODUCT_VERSION}.rb"
 }
 
 function install_and_test_cask() {
-  local PRODUCT="${1}"
-  local VERSION="${2}"
-  local EXPECTED_OUTPUT="${3}"
+  local PRODUCT_NAME="${1}"
+  local PRODUCT_VERSION="${2}"
 
   # uninstall potentially previously installed version of Cask
-  brew cask uninstall --force "${PRODUCT}@${VERSION}"
+  brew cask uninstall --force "${PRODUCT_NAME}@${PRODUCT_VERSION}"
+
+  # replace tapped (upstream) Cask with locally available version
+  rm -f "${UPSTREAM_CASKS_DIR}/${PRODUCT_NAME}@${PRODUCT_VERSION}.rb"
+  cp "${GENERATED_CASKS_DIR}/${PRODUCT_NAME}@${PRODUCT_VERSION}.rb" "${UPSTREAM_CASKS_DIR}/"
 
   # install Cask
-  brew cask install --force "${PRODUCT}@${VERSION}"
+  brew cask install --force "${PRODUCT_NAME}@${PRODUCT_VERSION}"
 
   # audit Cask
-  brew cask audit "${PRODUCT}@${VERSION}"
+  brew cask audit "${PRODUCT_NAME}@${PRODUCT_VERSION}"
 
   # check Cask style
-  brew cask style "${PRODUCT}@${VERSION}"
+  brew cask style "${PRODUCT_NAME}@${PRODUCT_VERSION}"
 
-  # compare installed version with expected version
-  ACTUAL_OUTPUT="$(${PRODUCT} --version)"
-
-  if [[ ${ACTUAL_OUTPUT} == ${EXPECTED_OUTPUT}* ]]; then
-    echo "!!! Expected output matched actual output for ${VERSION}"
-    brew cask uninstall --force "${PRODUCT}@${VERSION}"
-  else
-    echo "XXX  Expected output did not match actual output for \"${EXPECTED_OUTPUT}\" (got: ${ACTUAL_OUTPUT})"
-    exit 1
-  fi
+  # uninstall Cask
+  brew cask uninstall --force "${PRODUCT_NAME}@${PRODUCT_VERSION}"
 }

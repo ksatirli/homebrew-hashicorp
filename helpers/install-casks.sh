@@ -32,6 +32,18 @@ case "${1}" in
     done
     ;;
 
+  vault)
+    echo "Installing Vault 0.x.x versions"
+    for VERSION in "${VAULT_0XX[@]}"; do
+      install_and_test_cask "vault" "${VERSION}"
+    done
+
+    echo "Installing Vault 1.x.x versions"
+    for VERSION in "${VAULT_1XX[@]}"; do
+      install_and_test_cask "vault" "${VERSION}"
+    done
+    ;;
+
   *)
     echo "missing product"
     ;;
