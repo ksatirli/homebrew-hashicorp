@@ -91,7 +91,7 @@ NOMAD_08X=("0.8.0-rc1" "0.8.0" "0.8.1" "0.8.2" "0.8.3" "0.8.4-rc1" "0.8.4" "0.8.
 NOMAD_09X=("0.9.0-beta1" "0.9.0-beta2" "0.9.0-beta3" "0.9.0-rc1" "0.9.0-rc2" "0.9.0" "0.9.1-rc1" "0.9.1" "0.9.2-rc1" "0.9.2" "0.9.3" "0.9.4-rc1" "0.9.4" "0.9.5" "0.9.6" "0.9.7")
 
 # released between 2019-10 and 2020-02
-# `nomad-0.10.0-connect1` was not released on macOS and is therefore omitted
+# version `0.10.0-connect1` was not released for macOS and is therefore omitted
 NOMAD_010X=("0.10.0-beta1" "0.10.0-rc1" "0.10.0" "0.10.1" "0.10.2-rc1" "0.10.2" "0.10.3" "0.10.4-rc1" "0.10.4")
 
 NOMAD_0XX=("${NOMAD_08X[@]}" "${NOMAD_09X[@]}" "${NOMAD_010X[@]}")
@@ -125,9 +125,14 @@ VAGRANT_19X_64BIT=("1.9.3" "1.9.4" "1.9.5" "1.9.6" "1.9.7" "1.9.8")
 
 VAGRANT_1XX=("${VAGRANT_18X[@]}" "${VAGRANT_19X_32BIT[@]}" "${VAGRANT_19X_64BIT[@]}")
 
-VAGRANT_20X=("2.0.0" "2.0.1" "2.0.2" "2.0.3" "2.0.4")                         # released between 2017-09 and 2018-04
-VAGRANT_21X=("2.1.0" "2.1.1" "2.1.2" "2.1.3" "2.1.4" "2.1.5")                 # released between 2018-05 and 2018-09
-VAGRANT_22X=("2.2.0" "2.2.1" "2.2.2" "2.2.3" "2.2.4" "2.2.5" "2.2.6" "2.2.7") # released between 2018-10 and 2020-01
+# released between 2017-09 and 2018-04
+VAGRANT_20X=("2.0.0" "2.0.1" "2.0.2" "2.0.3" "2.0.4")
+
+# released between 2018-05 and 2018-09
+VAGRANT_21X=("2.1.0" "2.1.1" "2.1.2" "2.1.3" "2.1.4" "2.1.5")
+
+# released between 2018-10 and 2020-01
+VAGRANT_22X=("2.2.0" "2.2.1" "2.2.2" "2.2.3" "2.2.4" "2.2.5" "2.2.6" "2.2.7")
 
 VAGRANT_2XX=("${VAGRANT_20X[@]}" "${VAGRANT_21X[@]}" "${VAGRANT_22X[@]}")
 
