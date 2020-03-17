@@ -1,0 +1,14 @@
+cask 'nomad@%%VERSION%%' do
+  version '%%VERSION%%'
+  sha256 '%%CHECKSUM%%'
+
+  # releases.hashicorp.com was verified as official when first introduced to the cask
+  url 'https://releases.hashicorp.com/nomad/%%VERSION%%/nomad_%%VERSION%%%%ARCHITECTURE%%.zip'
+  appcast 'https://github.com/hashicorp/nomad/releases.atom'
+  name 'Nomad'
+  homepage 'https://www.nomadproject.io/'
+
+  auto_updates false
+
+  binary 'nomad'
+end

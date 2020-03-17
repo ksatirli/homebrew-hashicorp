@@ -13,6 +13,18 @@ case "${1}" in
     done
     ;;
 
+  nomad)
+    # generates Casks for Nomad and set prefix (`./`) for checksums
+    for VERSION in "${NOMAD_PREFIXED[@]}"; do
+      generate_cask "nomad" "${VERSION}" "zip" "_darwin_amd64" "" "./"
+    done
+
+    # generates Casks for Nomad
+    for VERSION in "${NOMAD_NONPREFIXED[@]}"; do
+      generate_cask "nomad" "${VERSION}" "zip" "_darwin_amd64" ""
+    done
+    ;;
+
   vagrant)
     # generates Casks for 32-bit versions of Vagrant
     for VERSION in "${VAGRANT_32BIT[@]}"; do
