@@ -101,6 +101,7 @@ Additionally, a special thanks goes out to the contributors of Brew's `homebrew-
 - [consul.rb](https://github.com/Homebrew/homebrew-core/commits/master/Formula/consul.rb)
 - [nomad.rb](https://github.com/Homebrew/homebrew-core/commits/master/Formula/nomad.rb)
 - [vagrant.rb](https://github.com/Homebrew/homebrew-core/commits/master/Formula/vagrant.rb)
+- [vault.rb](https://github.com/Homebrew/homebrew-core/commits/master/Formula/vault.rb)
 
 ## License
 
