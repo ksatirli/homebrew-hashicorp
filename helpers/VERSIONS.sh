@@ -154,7 +154,7 @@ VAULT_08X=("0.8.0" "0.8.0-beta1" "0.8.0-rc1" "0.8.1" "0.8.2" "0.8.3")
 VAULT_09X=("0.9.0" "0.9.1" "0.9.2" "0.9.3" "0.9.4" "0.9.5" "0.9.6")
 
 # released between 2018-04 and 2018-07
-VAULT_01X=("0.10.0" "0.10.0-beta1" "0.10.0-rc1" "0.10.1" "0.10.2" "0.10.3" "0.10.4")
+VAULT_010X=("0.10.0" "0.10.0-beta1" "0.10.0-rc1" "0.10.1" "0.10.2" "0.10.3" "0.10.4")
 
 # released between 2018-08 and 2018-12
 VAULT_011X=("0.11.0" "0.11.0-beta1" "0.11.1" "0.11.2" "0.11.3" "0.11.4" "0.11.5" "0.11.6")
@@ -179,7 +179,7 @@ VAULT_13X=("1.3.0" "1.3.0-beta1" "1.3.0-beta1+ent" "1.3.0+ent" "1.3.1" "1.3.1+en
 # versions `1.4.0-beta1+ent.hsm` were not released for macOS and are therefore omitted
 VAULT_14X=("1.4.0-beta1" "1.4.0-beta1+ent")
 
-VAULT_0XX=("${VAULT_07X[@]}" "${VAULT_08X[@]}" "${VAULT_09X[@]}" "${VAULT_01X[@]}" "${VAULT_011X[@]}")
+VAULT_0XX=("${VAULT_07X[@]}" "${VAULT_08X[@]}" "${VAULT_09X[@]}" "${VAULT_010X[@]}" "${VAULT_011X[@]}")
 VAULT_1XX=("${VAULT_10X[@]}" "${VAULT_11X[@]}" "${VAULT_12X[@]}" "${VAULT_13X[@]}" "${VAULT_14X[@]}")
 
 # shorthands for Vault versions with and without prefix in checksums file
