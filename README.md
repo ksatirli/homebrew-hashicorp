@@ -31,8 +31,10 @@ brew tap operatehappy/homebrew-hashicorp
 Once the tap is installed, you will have access to the following applications and versions
 
 - Casks
-  - Consul `>= 1.0.0` and `<= 1.7.1`
+  - Consul `>= 1.0.0` and `<= 1.7.2`
+  - Nomad `>= 0.8.0-rc1` and `<= 0.10.4`
   - Vagrant `>= 1.8.0` and `<= 2.2.7`
+  - Vault `>= 0.7.0` and `<= 1.4.0-beta1`
 
 ### Installing a Cask
 
