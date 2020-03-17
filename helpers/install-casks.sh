@@ -13,6 +13,13 @@ case "${1}" in
     done
     ;;
 
+  envconsul)
+    echo "Installing envconsul 0.x.x versions"
+    for VERSION in "${CONSUL_1XX[@]}"; do
+      install_and_test_cask "envconsul" "${VERSION}"
+    done
+    ;;
+
   nomad)
     echo "Installing Nomad 0.x.x versions"
     for VERSION in "${NOMAD_0XX[@]}"; do
