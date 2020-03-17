@@ -139,3 +139,49 @@ VAGRANT_2XX=("${VAGRANT_20X[@]}" "${VAGRANT_21X[@]}" "${VAGRANT_22X[@]}")
 # shorthands for 32-bit and 64-bit versions of Vagrant
 VAGRANT_32BIT=("${VAGRANT_18X[@]}" "${VAGRANT_19X_32BIT[@]}")
 VAGRANT_64BIT=("${VAGRANT_19X_64BIT[@]}" "${VAGRANT_2XX[@]}")
+
+########################################################################################################################
+#     VAULT                                                                                                            #
+########################################################################################################################
+
+# released between 2017-03 and 2017-06
+VAULT_07X=("0.7.0" "0.7.1" "0.7.2" "0.7.3")
+
+# released between 2017-08 and 2017-09
+VAULT_08X=("0.8.0" "0.8.0-beta1" "0.8.0-rc1" "0.8.1" "0.8.2" "0.8.3")
+
+# released between 2017-11 and 2018-03
+VAULT_09X=("0.9.0" "0.9.1" "0.9.2" "0.9.3" "0.9.4" "0.9.5" "0.9.6")
+
+# released between 2018-04 and 2018-07
+VAULT_01X=("0.10.0" "0.10.0-beta1" "0.10.0-rc1" "0.10.1" "0.10.2" "0.10.3" "0.10.4")
+
+# released between 2018-08 and 2018-12
+VAULT_011X=("0.11.0" "0.11.0-beta1" "0.11.1" "0.11.2" "0.11.3" "0.11.4" "0.11.5" "0.11.6")
+
+# released between 2018-12 and 2019-02
+VAULT_10X=("1.0.0" "1.0.0-beta1" "1.0.0-beta2" "1.0.0-rc1" "1.0.1" "1.0.2" "1.0.3")
+
+# released between 2019-03 and 2019-07
+VAULT_11X=("1.1.0" "1.1.0-beta1" "1.1.0-beta2" "1.1.1" "1.1.2" "1.1.3" "1.1.4" "1.1.5")
+
+# released between 2019-07 and 2019-11
+# versions `1.2.3+ent.hsm` and `1.2.4+ent.hsm` were not released for macOS and are therefore omitted
+VAULT_12X_NONPREFIXED=("1.2.0" "1.2.0-beta1" "1.2.0-beta2" "1.2.0-rc1" "1.2.1" "1.2.2" "1.2.3" "1.2.4" "1.2.4+ent")
+VAULT_12X_PREFIXED=("1.2.3+ent")
+VAULT_12X=("${VAULT_12X_NONPREFIXED[@]}" "${VAULT_12X_PREFIXED[@]}")
+
+# released between 2019-11 and 2020-03
+# versions `1.3.0-beta1+ent.hsm`, `1.3.0+ent.hsm`, `1.3.1+ent.hsm`, `1.3.2+ent.hsm`, and `1.3.3+ent.hsm` were not released for macOS and are therefore omitted
+VAULT_13X=("1.3.0" "1.3.0-beta1" "1.3.0-beta1+ent" "1.3.0+ent" "1.3.1" "1.3.1+ent" "1.3.2" "1.3.2+ent" "1.3.3" "1.3.3+ent")
+
+# released in 2020-02
+# versions `1.4.0-beta1+ent.hsm` were not released for macOS and are therefore omitted
+VAULT_14X=("1.4.0-beta1" "1.4.0-beta1+ent")
+
+VAULT_0XX=("${VAULT_07X[@]}" "${VAULT_08X[@]}" "${VAULT_09X[@]}" "${VAULT_01X[@]}" "${VAULT_011X[@]}")
+VAULT_1XX=("${VAULT_10X[@]}" "${VAULT_11X[@]}" "${VAULT_12X[@]}" "${VAULT_13X[@]}" "${VAULT_14X[@]}")
+
+# shorthands for Vault versions with and without prefix in checksums file
+VAULT_NONPREFIXED=("${VAULT_0XX[@]}" "${VAULT_10X[@]}" "${VAULT_11X[@]}" "${VAULT_12X_NONPREFIXED[@]}" "${VAULT_13X[@]}" "${VAULT_14X[@]}")
+VAULT_PREFIXED=("${VAULT_12X_PREFIXED[@]}")
