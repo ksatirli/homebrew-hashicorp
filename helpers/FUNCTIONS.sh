@@ -58,14 +58,13 @@ function generate_cask() {
 function install_and_test_cask() {
   local PRODUCT_NAME="${1}"
   local PRODUCT_VERSION="${2}"
-  local EXPECTED_OUTPUT="${3}"
 
   # uninstall potentially previously installed version of Cask
-#  brew cask uninstall --force "${PRODUCT_NAME}@${PRODUCT_VERSION}"
+  brew cask uninstall --force "${PRODUCT_NAME}@${PRODUCT_VERSION}"
 
   # replace tapped (upstream) Cask with locally available version
   rm -f "${UPSTREAM_CASKS_DIR}/${PRODUCT_NAME}@${PRODUCT_VERSION}.rb"
-  echo cp "${GENERATED_CASKS_DIR}/${PRODUCT_NAME}@${PRODUCT_VERSION}.rb" "${UPSTREAM_CASKS_DIR}/"
+  cp "${GENERATED_CASKS_DIR}/${PRODUCT_NAME}@${PRODUCT_VERSION}.rb" "${UPSTREAM_CASKS_DIR}/"
 
   # install Cask
   brew cask install --force "${PRODUCT_NAME}@${PRODUCT_VERSION}"
@@ -76,14 +75,6 @@ function install_and_test_cask() {
   # check Cask style
   brew cask style "${PRODUCT_NAME}@${PRODUCT_VERSION}"
 
-  # compare installed version with expected version
-  ACTUAL_OUTPUT="$(${PRODUCT_NAME} --version)"
-
-  if [[ ${ACTUAL_OUTPUT} == ${EXPECTED_OUTPUT}* ]]; then
-    echo "!!! Expected output matched actual output for ${PRODUCT_VERSION}"
-    brew cask uninstall --force "${PRODUCT_NAME}@${PRODUCT_VERSION}"
-  else
-    echo "XXX  Expected output did not match actual output for \"${EXPECTED_OUTPUT}\" (got: ${ACTUAL_OUTPUT})"
-    exit 1
-  fi
+  # uninstall Cask
+  brew cask uninstall --force "${PRODUCT_NAME}@${PRODUCT_VERSION}"
 }
