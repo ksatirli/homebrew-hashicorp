@@ -70,17 +70,19 @@ Your contribution may pertain to a different product and version, but the steps 
 
 - The `generate-casks.sh` helper will parse the `helpers/VERSION.sh` file and retrieve the _checksum_ for Vagrant `1.9.9`
 
-- Copy the generated Cask files to `$(brew --repo)/Library/Taps/operatehappy/homebrew-hashicorp/Casks/)`
+- Use `helpers/install-casks.sh vagrant` to verify installability of the newly generated Vagrant Cask
 
-- Uninstall the previously installed version of Vagrant using `brew cask uninstall vagrant@1.9.8`
+  - This helper will carry out the following steps:
 
-- Install the new version using `brew cask install vagrant@1.9.9`
+    - Copy the generated Cask to `$(brew --repo)/Library/Taps/operatehappy/homebrew-hashicorp/Casks/`
 
-- Uninstall the new version using `brew cask uninstall vagrant@1.9.9`
+    - Uninstalls the previously installed version of Vagrant using `brew cask uninstall vagrant@1.9.8`
 
-- Optional, but highly recommended: use `helpers/install-casks.sh vagrant` to verify installability of _all_ currently generated Casks
+    - Installs the new version using `brew cask install vagrant@1.9.9`
 
-- Optionally, but highly recommended: lint your contribution using `brew cask style`
+    - Lints the Cask file using `brew cask style vagrant@1.9.9.`
+
+    - Uninstall the new version using `brew cask uninstall vagrant@1.9.9`
 
 ## Notes
 
