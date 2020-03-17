@@ -46,6 +46,18 @@ case "${1}" in
     done
     ;;
 
+  vault)
+    # generates Casks for Vault
+    for VERSION in "${VAULT_NONPREFIXED[@]}"; do
+      generate_cask "vault" "${VERSION}" "zip" "_darwin_amd64" ""
+    done
+
+    # generates Casks for Vault and set prefix (`./`) for checksums
+    for VERSION in "${VAULT_PREFIXED[@]}"; do
+      generate_cask "vault" "${VERSION}" "zip" "_darwin_amd64" "" "./"
+    done
+    ;;
+
   *)
     echo "missing product"
     ;;
