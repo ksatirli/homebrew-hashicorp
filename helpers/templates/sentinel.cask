@@ -3,7 +3,6 @@ cask 'sentinel@%%PRODUCT_VERSION%%' do
   sha256 '%%PRODUCT_CHECKSUM%%'
 
   url 'https://releases.hashicorp.com/sentinel/%%PRODUCT_VERSION%%/sentinel_%%PRODUCT_VERSION%%%%PRODUCT_ARCHITECTURE%%.%%PRODUCT_FILE_EXTENSION%%'
-
   name 'sentinel'
   homepage 'https://www.hashicorp.com/sentinel/'
 
