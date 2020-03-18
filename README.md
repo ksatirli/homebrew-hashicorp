@@ -40,6 +40,7 @@ Once the tap is installed, you will have access to the following applications an
   - `consul-aws` `>= 0.1.0` and `<= 0.1.1`
   - `consul-template` `>= 0.1.0` and `<= 0.9.2`
   - `envconsul` `>= 0.1.0` and `<= 0.9.2`
+  - `sentinel` `>= 0.10.0` and `<= 0.15.1`
 
 ### Installing a Cask
 
