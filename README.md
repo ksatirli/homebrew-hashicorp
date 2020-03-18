@@ -37,6 +37,7 @@ Once the tap is installed, you will have access to the following applications an
   - Vagrant `>= 1.8.0` and `<= 2.2.7`
   - Vault `>= 0.7.0` and `<= 1.4.0-beta1`
 - misc. Casks
+  - `consul-template` `>= 0.1.0` and `<= 0.9.2`
   - `envconsul` `>= 0.1.0` and `<= 0.9.2`
 
 ### Installing a Cask
@@ -104,11 +105,12 @@ Development of this module was sponsored by [Operate Happy](https://github.com/o
 Additionally, a special thanks goes out to the contributors of Brew's `homebrew-core` formulae:
 
 - [consul.rb](https://github.com/Homebrew/homebrew-core/commits/master/Formula/consul.rb)
+- [consul-template.rb](https://github.com/Homebrew/homebrew-core/blob/master/Formula/consul-template.rb)
+- [envconsul.rb](https://github.com/Homebrew/homebrew-core/blob/master/Formula/envconsul.rb)
 - [nomad.rb](https://github.com/Homebrew/homebrew-core/commits/master/Formula/nomad.rb)
 - [packer.rb](https://github.com/Homebrew/homebrew-core/commits/master/Formula/packer.rb)
 - [vagrant.rb](https://github.com/Homebrew/homebrew-core/commits/master/Formula/vagrant.rb)
 - [vault.rb](https://github.com/Homebrew/homebrew-core/commits/master/Formula/vault.rb)
-- [envconsul.rb](https://github.com/Homebrew/homebrew-core/blob/master/Formula/envconsul.rb)
 
 ## License
 

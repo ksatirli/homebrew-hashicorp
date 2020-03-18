@@ -13,6 +13,14 @@ case "${1}" in
     done
     ;;
 
+  consul-template)
+    echo "Installing consul-template 0.x.x versions"
+    for VERSION in "${CONSUL_TEMPLATE_0XX[@]}"; do
+      install_and_test_cask "consul-template" "${VERSION}"
+    done
+    ;;
+
+
   envconsul)
     echo "Installing envconsul 0.x.x versions"
     for VERSION in "${ENVCONSUL_0XX[@]}"; do
