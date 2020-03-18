@@ -30,11 +30,13 @@ brew tap operatehappy/homebrew-hashicorp
 
 Once the tap is installed, you will have access to the following applications and versions
 
-- Casks
+- main Casks
   - Consul `>= 1.0.0` and `<= 1.7.2`
   - Nomad `>= 0.8.0-rc1` and `<= 0.10.4`
   - Vagrant `>= 1.8.0` and `<= 2.2.7`
   - Vault `>= 0.7.0` and `<= 1.4.0-beta1`
+- misc. Casks
+  - `envconsul` `>= 0.1.0` and `<= 0.9.2`
 
 ### Installing a Cask
 
@@ -104,6 +106,7 @@ Additionally, a special thanks goes out to the contributors of Brew's `homebrew-
 - [nomad.rb](https://github.com/Homebrew/homebrew-core/commits/master/Formula/nomad.rb)
 - [vagrant.rb](https://github.com/Homebrew/homebrew-core/commits/master/Formula/vagrant.rb)
 - [vault.rb](https://github.com/Homebrew/homebrew-core/commits/master/Formula/vault.rb)
+- [envconsul.rb](https://github.com/Homebrew/homebrew-core/blob/master/Formula/envconsul.rb)
 
 ## License
 

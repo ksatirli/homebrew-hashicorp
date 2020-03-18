@@ -13,6 +13,13 @@ case "${1}" in
     done
     ;;
 
+  envconsul)
+    # generates Casks for envconsul
+    for VERSION in "${ENVCONSUL_0XX[@]}"; do
+      generate_cask "envconsul" "${VERSION}" "zip" "_darwin_amd64"
+    done
+    ;;
+
   nomad)
     # generates Casks for Nomad and set prefix (`./`) for checksums
     for VERSION in "${NOMAD_PREFIXED[@]}"; do

@@ -59,9 +59,6 @@ function install_and_test_cask() {
   local PRODUCT_NAME="${1}"
   local PRODUCT_VERSION="${2}"
 
-  # uninstall potentially previously installed version of Cask
-  brew cask uninstall --force "${PRODUCT_NAME}@${PRODUCT_VERSION}"
-
   # replace tapped (upstream) Cask with locally available version
   rm -f "${UPSTREAM_CASKS_DIR}/${PRODUCT_NAME}@${PRODUCT_VERSION}.rb"
   cp "${GENERATED_CASKS_DIR}/${PRODUCT_NAME}@${PRODUCT_VERSION}.rb" "${UPSTREAM_CASKS_DIR}/"
