@@ -13,6 +13,13 @@ case "${1}" in
     done
     ;;
 
+  consul-aws)
+    # generates Casks for consul-aws
+    for VERSION in "${CONSUL_AWS_0XX[@]}"; do
+      generate_cask "consul-aws" "${VERSION}" "zip" "_darwin_amd64"
+    done
+    ;;
+
   consul-template)
     # generates Casks for consul-template
     for VERSION in "${CONSUL_TEMPLATE_0XX[@]}"; do
