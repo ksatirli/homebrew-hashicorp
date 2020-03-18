@@ -68,9 +68,9 @@ All products have variables that describe version ranges, these ranges are _gene
 
 ### Adding or Updating Casks
 
-In the following example, the steps reference a (currently unreleased) version of Vagrant `1.9.9` and a previously installed version of Vagrant `1.9.8`.
+In the following example, the steps reference a (currently unreleased) `1.9.9` version of Vagrant and a previously installed version of Vagrant `1.9.8`.
 
-Your contribution may pertain to a different product and version, but the steps remain alike:
+Your contribution may be for a different product and version, but the steps remain alike:
 
 - Edit the `VAGRANT_19X_64BIT` variable in `helpers/VERSIONS.sh` and add an entry of `"1.9.9"`
 
@@ -97,6 +97,8 @@ Your contribution may pertain to a different product and version, but the steps 
 - An exhaustive list of versions, is available via [helpers/VERSIONS.sh](https://github.com/operatehappy/homebrew-hashicorp/blob/master/helpers/VERSIONS.sh)
 
 - Vagrant switched from a _32-bit_ architecture to a _64-bit_ one after version `1.9.2`
+
+- For (legacy) versions of Terraform, please have a look at [tfenv](https://github.com/tfutils/tfenv) and [tfswitch](https://warrensbox.github.io/terraform-switcher/)
 
 ## Author Information
 
