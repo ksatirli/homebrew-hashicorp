@@ -28,7 +28,7 @@ Install this repository using the [brew tap](https://docs.brew.sh/Taps#the-brew-
 brew tap operatehappy/homebrew-hashicorp
 ```
 
-Once the tap is installed, you will have access to the following applications and versions
+This Tap provides an exhaustive range of versions for the following applications:
 
 - main Casks
   - Consul `>= 1.0.0` and `<= 1.7.2`
@@ -41,6 +41,8 @@ Once the tap is installed, you will have access to the following applications an
   - `consul-template` `>= 0.1.0` and `<= 0.9.2`
   - `envconsul` `>= 0.1.0` and `<= 0.9.2`
   - `sentinel` `>= 0.10.0` and `<= 0.15.1`
+
+Contrary to the upstream [homebrew-core](https://github.com/Homebrew/homebrew-core/) repository, this Tap uses _pre-built_ binaries as available via [releases.hashicorp.com](https://releases.hashicorp.com/).
 
 ### Installing a Cask
 
