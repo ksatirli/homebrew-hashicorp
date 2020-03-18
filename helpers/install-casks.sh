@@ -27,6 +27,13 @@ case "${1}" in
     done
     ;;
 
+  packer)
+    echo "Installing Packer 1.x.x versions"
+    for VERSION in "${PACKER_1XX[@]}"; do
+      install_and_test_cask "packer" "${VERSION}"
+    done
+    ;;
+
   vagrant)
     echo "Installing Vagrant 1.x.x versions"
     for VERSION in "${VAGRANT_1XX[@]}"; do
