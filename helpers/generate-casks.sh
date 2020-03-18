@@ -32,6 +32,13 @@ case "${1}" in
     done
     ;;
 
+  packer)
+    # generates Casks for Packer
+    for VERSION in "${PACKER_1XX[@]}"; do
+      generate_cask "packer" "${VERSION}" "zip" "_darwin_amd64" ""
+    done
+    ;;
+
   vagrant)
     # generates Casks for 32-bit versions of Vagrant
     for VERSION in "${VAGRANT_32BIT[@]}"; do
