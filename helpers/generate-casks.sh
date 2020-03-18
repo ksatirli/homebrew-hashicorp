@@ -13,6 +13,20 @@ case "${1}" in
     done
     ;;
 
+  consul-aws)
+    # generates Casks for consul-aws
+    for VERSION in "${CONSUL_AWS_0XX[@]}"; do
+      generate_cask "consul-aws" "${VERSION}" "zip" "_darwin_amd64"
+    done
+    ;;
+
+  consul-template)
+    # generates Casks for consul-template
+    for VERSION in "${CONSUL_TEMPLATE_0XX[@]}"; do
+      generate_cask "consul-template" "${VERSION}" "zip" "_darwin_amd64"
+    done
+    ;;
+
   envconsul)
     # generates Casks for envconsul
     for VERSION in "${ENVCONSUL_0XX[@]}"; do
@@ -21,7 +35,7 @@ case "${1}" in
     ;;
 
   nomad)
-    # generates Casks for Nomad and set prefix (`./`) for checksums
+    # generates Casks for Nomad and sets prefix (`./`) for checksums
     for VERSION in "${NOMAD_PREFIXED[@]}"; do
       generate_cask "nomad" "${VERSION}" "zip" "_darwin_amd64" "" "./"
     done
@@ -66,7 +80,7 @@ case "${1}" in
       generate_cask "vault" "${VERSION}" "zip" "_darwin_amd64" ""
     done
 
-    # generates Casks for Vault and set prefix (`./`) for checksums
+    # generates Casks for Vault and sets prefix (`./`) for checksums
     for VERSION in "${VAULT_PREFIXED[@]}"; do
       generate_cask "vault" "${VERSION}" "zip" "_darwin_amd64" "" "./"
     done

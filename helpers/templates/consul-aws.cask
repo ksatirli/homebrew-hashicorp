@@ -1,0 +1,14 @@
+cask 'consul-aws@%%PRODUCT_VERSION%%' do
+  version '%%PRODUCT_VERSION%%'
+  sha256 '%%PRODUCT_CHECKSUM%%'
+
+  # releases.hashicorp.com was verified as official when first introduced to the cask
+  url 'https://releases.hashicorp.com/consul-aws/%%PRODUCT_VERSION%%/consul-aws_%%PRODUCT_VERSION%%%%PRODUCT_ARCHITECTURE%%.%%PRODUCT_FILE_EXTENSION%%'
+  appcast 'https://github.com/hashicorp/consul-aws/releases.atom'
+  name 'consul-aws'
+  homepage 'https://github.com/hashicorp/consul-aws'
+
+  auto_updates false
+
+  binary 'consul-aws'
+end
