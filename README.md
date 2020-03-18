@@ -37,6 +37,7 @@ Once the tap is installed, you will have access to the following applications an
   - Vagrant `>= 1.8.0` and `<= 2.2.7`
   - Vault `>= 0.7.0` and `<= 1.4.0-beta1`
 - misc. Casks
+  - `consul-aws` `>= 0.1.0` and `<= 0.1.1`
   - `consul-template` `>= 0.1.0` and `<= 0.9.2`
   - `envconsul` `>= 0.1.0` and `<= 0.9.2`
 
