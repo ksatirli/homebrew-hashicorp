@@ -1,0 +1,13 @@
+cask 'sentinel@%%PRODUCT_VERSION%%' do
+  version '%%PRODUCT_VERSION%%'
+  sha256 '%%PRODUCT_CHECKSUM%%'
+
+  url 'https://releases.hashicorp.com/sentinel/%%PRODUCT_VERSION%%/sentinel_%%PRODUCT_VERSION%%%%PRODUCT_ARCHITECTURE%%.%%PRODUCT_FILE_EXTENSION%%'
+  name 'sentinel'
+  homepage 'https://www.hashicorp.com/sentinel/'
+
+  auto_updates false
+  conflicts_with formula: 'sentinel'
+
+  binary 'sentinel'
+end

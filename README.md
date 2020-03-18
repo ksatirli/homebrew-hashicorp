@@ -28,7 +28,7 @@ Install this repository using the [brew tap](https://docs.brew.sh/Taps#the-brew-
 brew tap operatehappy/homebrew-hashicorp
 ```
 
-Once the tap is installed, you will have access to the following applications and versions
+This Tap provides an exhaustive range of versions for the following applications:
 
 - main Casks
   - Consul `>= 1.0.0` and `<= 1.7.2`
@@ -40,6 +40,9 @@ Once the tap is installed, you will have access to the following applications an
   - `consul-aws` `>= 0.1.0` and `<= 0.1.1`
   - `consul-template` `>= 0.1.0` and `<= 0.9.2`
   - `envconsul` `>= 0.1.0` and `<= 0.9.2`
+  - `sentinel` `>= 0.10.0` and `<= 0.15.1`
+
+Contrary to the upstream [homebrew-core](https://github.com/Homebrew/homebrew-core/) repository, this Tap uses _pre-built_ binaries as available via [releases.hashicorp.com](https://releases.hashicorp.com/).
 
 ### Installing a Cask
 
@@ -67,9 +70,9 @@ All products have variables that describe version ranges, these ranges are _gene
 
 ### Adding or Updating Casks
 
-In the following example, the steps reference a (currently unreleased) version of Vagrant `1.9.9` and a previously installed version of Vagrant `1.9.8`.
+In the following example, the steps reference a (currently unreleased) `1.9.9` version of Vagrant and a previously installed version of Vagrant `1.9.8`.
 
-Your contribution may pertain to a different product and version, but the steps remain alike:
+Your contribution may be for a different product and version, but the steps remain alike:
 
 - Edit the `VAGRANT_19X_64BIT` variable in `helpers/VERSIONS.sh` and add an entry of `"1.9.9"`
 
@@ -96,6 +99,8 @@ Your contribution may pertain to a different product and version, but the steps 
 - An exhaustive list of versions, is available via [helpers/VERSIONS.sh](https://github.com/operatehappy/homebrew-hashicorp/blob/master/helpers/VERSIONS.sh)
 
 - Vagrant switched from a _32-bit_ architecture to a _64-bit_ one after version `1.9.2`
+
+- For (legacy) versions of Terraform, please have a look at [tfenv](https://github.com/tfutils/tfenv) and [tfswitch](https://warrensbox.github.io/terraform-switcher/)
 
 ## Author Information
 
