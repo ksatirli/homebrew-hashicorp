@@ -35,7 +35,7 @@ case "${1}" in
     ;;
 
   nomad)
-    # generates Casks for Nomad and set prefix (`./`) for checksums
+    # generates Casks for Nomad and sets prefix (`./`) for checksums
     for VERSION in "${NOMAD_PREFIXED[@]}"; do
       generate_cask "nomad" "${VERSION}" "zip" "_darwin_amd64" "" "./"
     done
@@ -80,7 +80,7 @@ case "${1}" in
       generate_cask "vault" "${VERSION}" "zip" "_darwin_amd64" ""
     done
 
-    # generates Casks for Vault and set prefix (`./`) for checksums
+    # generates Casks for Vault and sets prefix (`./`) for checksums
     for VERSION in "${VAULT_PREFIXED[@]}"; do
       generate_cask "vault" "${VERSION}" "zip" "_darwin_amd64" "" "./"
     done
