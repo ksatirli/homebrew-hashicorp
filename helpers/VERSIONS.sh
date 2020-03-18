@@ -125,13 +125,15 @@ NOMAD_09X=("0.9.0-beta1" "0.9.0-beta2" "0.9.0-beta3" "0.9.0-rc1" "0.9.0-rc2" "0.
 
 # released between 2019-10 and 2020-02
 # version `0.10.0-connect1` was not released for macOS and is therefore omitted
-NOMAD_010X=("0.10.0-beta1" "0.10.0-rc1" "0.10.0" "0.10.1" "0.10.2-rc1" "0.10.2" "0.10.3" "0.10.4-rc1" "0.10.4")
+NOMAD_010X_PREFIXED=("0.10.0-beta1" "0.10.0-rc1" "0.10.0" "0.10.1" "0.10.2-rc1" "0.10.2")
+NOMAD_010X_NONPREFIXED=("0.10.3" "0.10.4-rc1" "0.10.4")
+NOMAD_010X=("${NOMAD_010X_PREFIXED[@]}" "${NOMAD_010X_NONPREFIXED[@]}")
 
 NOMAD_0XX=("${NOMAD_08X[@]}" "${NOMAD_09X[@]}" "${NOMAD_010X[@]}")
 
 # shorthands for Nomad versions with and without prefix in checksums file
-NOMAD_PREFIXED=("${NOMAD_08X[@]}" "${NOMAD_09X[@]}" "0.10.0-beta1" "0.10.0-rc1" "0.10.0" "0.10.1" "0.10.2-rc1" "0.10.2")
-NOMAD_NONPREFIXED=("0.10.3" "0.10.4-rc1" "0.10.4")
+NOMAD_PREFIXED=("${NOMAD_08X[@]}" "${NOMAD_09X[@]}" "${NOMAD_010X_PREFIXED[@]}" "${NOMAD_010X_NONPREFIXED[@]}")
+PACKER_1XX=("${PACKER_10X[@]}" "${PACKER_11X[@]}" "${PACKER_12X[@]}" "${PACKER_13X[@]}" "${PACKER_14X[@]}" "${PACKER_15X[@]}")
 
 ########################################################################################################################
 #     VAGRANT                                                                                                          #
