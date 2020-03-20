@@ -14,6 +14,9 @@ Any other relevant environment information:
 
 # TODO
 
-- [ ] Checked open [Pull Requests](https://github.com/operatehappy/homebrew-hashicorp/pulls) for the same Cask update
+- [ ] Checked open [Pull Requests](https://github.com/operatehappy/homebrew-hashicorp/pulls) for a similar Cask update
 - [ ] Built the Cask locally and verified its installability
-- [ ] Audited the Cask using `brew cask audit product@x.y.z` or `brew cask audit product@x.y.z` respectively
+- [ ] Tested installability using `brew cask install product@x.y.z.rb`
+- [ ] Tested uninstallability using `brew cask uninstall product@x.y.z.rb`
+- [ ] Audited the Cask using `brew cask audit --download product@x.y.z` with no errors
+- [ ] Style-checked the Cask using `brew cask style --fix product@x.y.z` and reported no offenses
