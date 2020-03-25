@@ -34,6 +34,7 @@ function generate_cask() {
     echo "grep '${GREP_PATTERN}'"
     echo
   fi
+
   # fetch checksums file and assign value to variable
   PRODUCT_CHECKSUM="$(curl \
     --get \
