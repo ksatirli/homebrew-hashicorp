@@ -33,7 +33,7 @@ This Tap provides an exhaustive range of versions for the following applications
 - main Casks
   - Consul `>= 1.0.0` and `<= 1.7.2`
   - Packer `>= 1.0.0` and `<= 1.5.4`
-  - Nomad `>= 0.8.0-rc1` and `<= 0.10.4`
+  - Nomad `>= 0.8.0-rc1` and `<= 0.11.0-beta1`
   - Vagrant `>= 1.8.0` and `<= 2.2.7`
   - Vault `>= 0.7.0` and `<= 1.4.0-rc1`
 - misc. Casks
@@ -104,7 +104,7 @@ Your contribution may be for a different product and version, but the steps rema
 
 ## Author Information
 
-This tap is maintained by the contributors listed on [GitHub](https://github.com/operatehappy/homebrew-hashicorp/graphs/contributors)
+This tap is maintained by the contributors listed on [GitHub](https://github.com/operatehappy/homebrew-hashicorp/graphs/contributors).
 
 Development of this module was sponsored by [Operate Happy](https://github.com/operatehappy).
 
@@ -122,7 +122,7 @@ Additionally, a special thanks goes out to the contributors of Brew's `homebrew-
 
 Licensed under the Apache License, Version 2.0 (the "License").
 
-You may obtain a copy of the License at [apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+You may obtain a copy of the License at [apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an _"AS IS"_ basis, without WARRANTIES or conditions of any kind, either express or implied.
 

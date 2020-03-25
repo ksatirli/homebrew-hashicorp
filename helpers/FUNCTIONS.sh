@@ -24,16 +24,25 @@ function generate_cask() {
     PRODUCT_ARCHITECTURE=""
   fi
 
+  CURL_URL="https://releases.hashicorp.com/${PRODUCT_NAME}/${PRODUCT_VERSION}/${PRODUCT_NAME}_${PRODUCT_VERSION}_SHA256SUMS"
+  GREP_PATTERN="  ${PRODUCT_CHECKSUM_PREFIX}${PRODUCT_NAME}_${PRODUCT_VERSION}${PRODUCT_ARCHITECTURE}.${PRODUCT_FILE_EXTENSION}"
+
   echo "generating Cask for ${PRODUCT_NAME}_${PRODUCT_VERSION}${PRODUCT_ARCHITECTURE}"
+
+  if [ -n "${DEBUG}" ]; then
+    echo "curl ${CURL_URL}"
+    echo "grep '${GREP_PATTERN}'"
+    echo
+  fi
 
   # fetch checksums file and assign value to variable
   PRODUCT_CHECKSUM="$(curl \
     --get \
     --location \
     --silent \
-    "https://releases.hashicorp.com/${PRODUCT_NAME}/${PRODUCT_VERSION}/${PRODUCT_NAME}_${PRODUCT_VERSION}_SHA256SUMS" |
+    "${CURL_URL}" |
     grep \
-      "  ${PRODUCT_CHECKSUM_PREFIX}${PRODUCT_NAME}_${PRODUCT_VERSION}${PRODUCT_ARCHITECTURE}.${PRODUCT_FILE_EXTENSION}" |
+      "${GREP_PATTERN}" |
     cut \
       -f 1 \
       -d " ")"
