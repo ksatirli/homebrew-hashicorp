@@ -33,9 +33,9 @@ This Tap provides an exhaustive range of versions for the following applications
 - main Casks
   - Consul `>= 1.0.0` and `<= 1.7.2`
   - Packer `>= 1.0.0` and `<= 1.5.5`
-  - Nomad `>= 0.8.0-rc1` and `<= 0.11.0-beta2`
+  - Nomad `>= 0.8.0-rc1` and `<= 0.11.0-rc1`
   - Vagrant `>= 1.8.0` and `<= 2.2.7`
-  - Vault `>= 0.7.0` and `<= 1.4.0-rc1`
+  - Vault `>= 0.7.0` and `<= 1.4.0`
 - misc. Casks
   - `consul-aws` `>= 0.1.0` and `<= 0.1.2`
   - `consul-template` `>= 0.1.0` and `<= 0.9.2`
