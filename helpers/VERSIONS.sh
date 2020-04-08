@@ -63,8 +63,8 @@ CONSUL_1XX=("${CONSUL_10X[@]}" "${CONSUL_11X[@]}" "${CONSUL_12X[@]}" "${CONSUL_1
 #     CONSUL-AWS                                                                                                       #
 ########################################################################################################################
 
-# released between 2018-11 and 2018-12
-CONSUL_AWS_01X=("0.1.0" "0.1.1")
+# released between 2018-11 and 2020-04
+CONSUL_AWS_01X=("0.1.0" "0.1.1" "0.1.2")
 
 CONSUL_AWS_0XX=("${CONSUL_AWS_01X[@]}")
 

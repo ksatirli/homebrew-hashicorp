@@ -37,7 +37,7 @@ This Tap provides an exhaustive range of versions for the following applications
   - Vagrant `>= 1.8.0` and `<= 2.2.7`
   - Vault `>= 0.7.0` and `<= 1.4.0-rc1`
 - misc. Casks
-  - `consul-aws` `>= 0.1.0` and `<= 0.1.1`
+  - `consul-aws` `>= 0.1.0` and `<= 0.1.2`
   - `consul-template` `>= 0.1.0` and `<= 0.9.2`
   - `envconsul` `>= 0.1.0` and `<= 0.9.2`
   - `sentinel` `>= 0.10.0` and `<= 0.15.1`
