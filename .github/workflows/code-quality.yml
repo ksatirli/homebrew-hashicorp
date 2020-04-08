@@ -8,6 +8,7 @@ on:
 env:
   PARENT_ORG: operatehappy
   META_PATH: dotfiles-org
+  HOMEBREW_TOOLS_PATH: homebrew-tools
   SELF_PATH: repository
   PYTHON_VERSION: 3.8
   PYTHON_ARCH: x64
@@ -27,6 +28,14 @@ jobs:
           repository: ${{ env.PARENT_ORG }}/${{ env.META_PATH }}
           ref: master
           path: ${{ env.META_PATH }}
+          fetch-depth: 1
+
+      - name: Checkout Homebrew Helpers Repository
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ env.PARENT_ORG }}/${{ env.HOMEBREW_TOOLS_PATH }}
+          ref: master
+          path: ${{ env.HOMEBREW_TOOLS_PATH }}
           fetch-depth: 1
 
       - name: Checkout Repository
