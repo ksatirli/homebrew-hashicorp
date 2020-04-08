@@ -2,8 +2,8 @@
 
 set -e
 
-# shellcheck source=./helpers/FUNCTIONS.sh
-. "./helpers/FUNCTIONS.sh"
+# shellcheck source=../homebrew-tools/FUNCTIONS.sh
+. "../homebrew-tools/FUNCTIONS.sh"
 
 case "${1}" in
   consul)
