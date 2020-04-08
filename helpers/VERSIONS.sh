@@ -63,8 +63,8 @@ CONSUL_1XX=("${CONSUL_10X[@]}" "${CONSUL_11X[@]}" "${CONSUL_12X[@]}" "${CONSUL_1
 #     CONSUL-AWS                                                                                                       #
 ########################################################################################################################
 
-# released between 2018-11 and 2018-12
-CONSUL_AWS_01X=("0.1.0" "0.1.1")
+# released between 2018-11 and 2020-04
+CONSUL_AWS_01X=("0.1.0" "0.1.1" "0.1.2")
 
 CONSUL_AWS_0XX=("${CONSUL_AWS_01X[@]}")
 
@@ -159,13 +159,14 @@ NOMAD_08X=("0.8.0-rc1" "0.8.0" "0.8.1" "0.8.2" "0.8.3" "0.8.4-rc1" "0.8.4" "0.8.
 # released between 2019-04 and 2019-12
 NOMAD_09X=("0.9.0-beta1" "0.9.0-beta2" "0.9.0-beta3" "0.9.0-rc1" "0.9.0-rc2" "0.9.0" "0.9.1-rc1" "0.9.1" "0.9.2-rc1" "0.9.2" "0.9.3" "0.9.4-rc1" "0.9.4" "0.9.5" "0.9.6" "0.9.7")
 
-# released between 2019-10 and 2020-02
+# released between 2019-10 and 2020-03
 # version `0.10.0-connect1` was not released for macOS and is therefore omitted
 NOMAD_010X_PREFIXED=("0.10.0-beta1" "0.10.0-rc1" "0.10.0" "0.10.1" "0.10.2-rc1" "0.10.2")
 NOMAD_010X_NONPREFIXED=("0.10.3" "0.10.4-rc1" "0.10.4" "0.10.5")
 NOMAD_010X=("${NOMAD_010X_PREFIXED[@]}" "${NOMAD_010X_NONPREFIXED[@]}")
 
-NOMAD_011X=("0.11.0-beta1" "0.11.0-beta2")
+# released between 2019-10 and 2020-04
+NOMAD_011X=("0.11.0-beta1" "0.11.0-beta2" "0.11.0-rc1")
 
 NOMAD_0XX=("${NOMAD_08X[@]}" "${NOMAD_09X[@]}" "${NOMAD_010X[@]}" "${NOMAD_011X[@]}")
 
@@ -332,9 +333,9 @@ VAULT_12X=("${VAULT_12X_NONPREFIXED[@]}" "${VAULT_12X_PREFIXED[@]}")
 # versions `1.3.0-beta1+ent.hsm`, `1.3.0+ent.hsm`, `1.3.1+ent.hsm`, `1.3.2+ent.hsm`, `1.3.3+ent.hsm`, and `1.3.4+ent.hsm` were not released for macOS and are therefore omitted
 VAULT_13X=("1.3.0" "1.3.0-beta1" "1.3.0-beta1+ent" "1.3.0+ent" "1.3.1" "1.3.1+ent" "1.3.2" "1.3.2+ent" "1.3.3" "1.3.3+ent" "1.3.4" "1.3.4+ent")
 
-# released in 2020-02
+# released between 2020-02 and 2020-04
 # versions `1.4.0-beta1+ent.hsm` and `1.4.0-rc1+ent.hsm` were not released for macOS and are therefore omitted
-VAULT_14X=("1.4.0-beta1" "1.4.0-beta1+ent" "1.4.0-rc1" "1.4.0-rc1+ent")
+VAULT_14X=("1.4.0-beta1" "1.4.0-beta1+ent" "1.4.0-rc1" "1.4.0-rc1+ent" "1.4.0")
 
 VAULT_0XX=("${VAULT_07X[@]}" "${VAULT_08X[@]}" "${VAULT_09X[@]}" "${VAULT_010X[@]}" "${VAULT_011X[@]}")
 VAULT_1XX=("${VAULT_10X[@]}" "${VAULT_11X[@]}" "${VAULT_12X[@]}" "${VAULT_13X[@]}" "${VAULT_14X[@]}")
