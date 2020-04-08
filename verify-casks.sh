@@ -2,6 +2,9 @@
 
 set -e
 
+# shellcheck source=./VERSIONS.sh
+. "./VERSIONS.sh"
+
 # shellcheck source=../homebrew-tools/FUNCTIONS.sh
 . "../homebrew-tools/FUNCTIONS.sh"
 

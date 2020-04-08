@@ -3,7 +3,7 @@ cask 'envconsul@%%PRODUCT_VERSION%%' do
   sha256 '%%PRODUCT_CHECKSUM%%'
 
   # releases.hashicorp.com was verified as official when first introduced to the cask
-  url 'https://releases.hashicorp.com/envconsul/%%PRODUCT_VERSION%%/envconsul_%%PRODUCT_VERSION%%%%PRODUCT_ARCHITECTURE%%.%%PRODUCT_FILE_EXTENSION%%'
+  url 'https://releases.hashicorp.com/envconsul/%%PRODUCT_VERSION%%/%%PRODUCT_PACKAGE_PATH%%'
   appcast 'https://github.com/hashicorp/envconsul/releases.atom'
   name 'envconsul'
   homepage 'https://github.com/hashicorp/envconsul'

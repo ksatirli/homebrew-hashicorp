@@ -3,7 +3,7 @@ cask 'packer@%%PRODUCT_VERSION%%' do
   sha256 '%%PRODUCT_CHECKSUM%%'
 
   # releases.hashicorp.com was verified as official when first introduced to the cask
-  url 'https://releases.hashicorp.com/packer/%%PRODUCT_VERSION%%/packer_%%PRODUCT_VERSION%%%%PRODUCT_ARCHITECTURE%%.%%PRODUCT_FILE_EXTENSION%%'
+  url 'https://releases.hashicorp.com/packer/%%PRODUCT_VERSION%%/%%PRODUCT_PACKAGE_PATH%%'
   appcast 'https://github.com/hashicorp/packer/releases.atom'
   name 'Packer'
   homepage 'https://www.packer.io/'
