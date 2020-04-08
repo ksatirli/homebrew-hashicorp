@@ -60,13 +60,9 @@ brew cask install vagrant@1.8.0
 
 ## Contributing
 
-This repository includes _helpers_ that assist with the generation of _Cask_ and files.
+The [operatehappy/homebrew-tools](https://github.com/operatehappy/homebrew-tools) repository includes _tools_ that assist with the generation of _Casks_ for this and other [@operatehappy-maintained Taps](https://github.com/search?q=org%3Aoperatehappy+homebrew-tap).
 
-The generators source `helpers/VERSIONS.sh` for rendering of the templates available in `helpers/templates`
-
-Start by editing `helpers/VERSIONS.sh` and expanding the variable that best reflects the version you are looking to add.
-
-All products have variables that describe version ranges, these ranges are _generally_ for a full minor-version range, but exceptions are made when an architecture switch from _32-bit_ to _64-bit_ occurs
+The `generate-casks.sh` and `verify-casks.sh` scripts expect the `operatehappy/homebrew-tools` to be available on the same level as this repository.
 
 ### Adding or Updating Casks
 
@@ -74,13 +70,13 @@ In the following example, the steps reference a (currently unreleased) `1.9.9` v
 
 Your contribution may be for a different product and version, but the steps remain alike:
 
-- Edit the `VAGRANT_19X_64BIT` variable in `helpers/VERSIONS.sh` and add an entry of `"1.9.9"`
+- Edit the `VAGRANT_19X_64BIT` variable in `VERSIONS.sh` and add an entry of `"1.9.9"`
 
-- Generate a Cask file for this version, using `helpers/generate-casks.sh vagrant`
+- Generate a Cask file for this version, using `generate-casks.sh vagrant`
 
-- The `generate-casks.sh` helper will parse the `helpers/VERSION.sh` file and retrieve the _checksum_ for Vagrant `1.9.9`
+- The `generate-casks.sh` helper will parse the `VERSION.sh` file and retrieve the _checksum_ for Vagrant `1.9.9`
 
-- Use `helpers/install-casks.sh vagrant` to verify installability of the newly generated Vagrant Cask
+- Use `install-casks.sh vagrant` to verify installability of the newly generated Vagrant Cask
 
   - This helper will carry out the following steps:
 
@@ -96,11 +92,11 @@ Your contribution may be for a different product and version, but the steps rema
 
 ## Notes
 
-- An exhaustive list of versions, is available via [helpers/VERSIONS.sh](https://github.com/operatehappy/homebrew-hashicorp/blob/master/helpers/VERSIONS.sh)
+- An exhaustive list of versions, is available via [VERSIONS.sh](https://github.com/operatehappy/homebrew-hashicorp/blob/master/VERSIONS.sh).
 
-- Vagrant switched from a _32-bit_ architecture to a _64-bit_ one after version `1.9.2`
+- Vagrant switched from a _32-bit_ architecture to a _64-bit_ one after version `1.9.2`.
 
-- For (legacy) versions of Terraform, please have a look at [tfenv](https://github.com/tfutils/tfenv) and [tfswitch](https://warrensbox.github.io/terraform-switcher/)
+- For (legacy) versions of Terraform, please have a look at [tfenv](https://github.com/tfutils/tfenv) and [tfswitch](https://warrensbox.github.io/terraform-switcher/).
 
 ## Author Information
 
