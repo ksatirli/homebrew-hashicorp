@@ -15,6 +15,7 @@ CASK_FILE="templates/generic.cask"
 
 case "${1}" in
   consul)
+    # shellcheck disable=SC2034
     BINARY="${1}"
     NAME="Consul"
     HOMEPAGE="https:\/\/www.consul.io\/"
@@ -29,6 +30,7 @@ case "${1}" in
     ;;
 
   consul-aws)
+    # shellcheck disable=SC2034
     BINARY="${1}"
     NAME="${1}"
     HOMEPAGE="https:\/\/github.com\/hashicorp\/consul-aws"
@@ -43,6 +45,7 @@ case "${1}" in
     ;;
 
   consul-template)
+    # shellcheck disable=SC2034
     BINARY="${1}"
     NAME="${1}"
     HOMEPAGE="https:\/\/github.com\/hashicorp\/consul-template"
@@ -57,6 +60,7 @@ case "${1}" in
     ;;
 
   envconsul)
+    # shellcheck disable=SC2034
     BINARY="${1}"
     NAME="${1}"
     HOMEPAGE="https:\/\/github.com\/hashicorp\/envconsul"
@@ -71,6 +75,7 @@ case "${1}" in
     ;;
 
   nomad)
+    # shellcheck disable=SC2034
     BINARY="${1}"
     NAME="Nomad"
     HOMEPAGE="https:\/\/www.nomadproject.io\/"
@@ -92,7 +97,23 @@ case "${1}" in
     done
     ;;
 
+  nomad-autoscaler)
+    # shellcheck disable=SC2034
+    BINARY="${1}"
+    NAME="${1}"
+    HOMEPAGE="https:\/\/www.nomadproject.io\/"
+
+    for VERSION in "${NOMAD_AUTOSCALER_0XX[@]}"; do
+      # shellcheck disable=SC2034
+      PACKAGE_PATH="${BINARY}_${VERSION}_darwin_amd64.zip"
+      CHECKSUM_URL="${CHECKSUM_URL_BASE}/${BINARY}/${VERSION}/${BINARY}_${VERSION}_SHA256SUMS"
+      CHECKSUM_PATTERN="${PACKAGE_PATH}"
+      generate_cask
+    done
+    ;;
+
   packer)
+    # shellcheck disable=SC2034
     BINARY="${1}"
     NAME="Packer"
     HOMEPAGE="https:\/\/www.packer.io\/"
@@ -107,8 +128,10 @@ case "${1}" in
     ;;
 
   sentinel)
+    # shellcheck disable=SC2034
     BINARY="sentinel"
     NAME="Sentinel"
+    # shellcheck disable=SC2034
     CASK_FILE="templates/sentinel.cask"
 
     for VERSION in "${SENTINEL_0XX[@]}"; do
@@ -121,9 +144,11 @@ case "${1}" in
     ;;
 
   vagrant)
+    # shellcheck disable=SC2034
     BINARY="${1}"
     NAME="Vagrant"
     HOMEPAGE="https:\/\/www.vagrantup.com\/"
+    # shellcheck disable=SC2034
     CASK_FILE="templates/vagrant.cask"
 
     for VERSION in "${VAGRANT_32BIT[@]}"; do
@@ -156,6 +181,7 @@ case "${1}" in
     ;;
 
   vault)
+    # shellcheck disable=SC2034
     BINARY="${1}"
     NAME="Vault"
     HOMEPAGE="https:\/\/www.vaultproject.io\/"
