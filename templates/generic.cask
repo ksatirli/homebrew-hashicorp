@@ -1,0 +1,15 @@
+cask '%%BINARY%%@%%VERSION%%' do
+  version '%%VERSION%%'
+  sha256 '%%CHECKSUM%%'
+
+  # releases.hashicorp.com was verified as official when first introduced to the cask
+  url '%%PACKAGE_PROTOCOL%%://%%PACKAGE_HOST%%/%%BINARY%%/%%VERSION%%/%%PACKAGE_PATH%%'
+  appcast 'https://github.com/hashicorp/%%BINARY%%/releases.atom'
+  name '%%NAME%%'
+  homepage '%%HOMEPAGE%%'
+
+  auto_updates false
+  conflicts_with formula: '%%BINARY%%'
+
+  binary '%%BINARY%%'
+end
