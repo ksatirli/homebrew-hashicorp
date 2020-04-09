@@ -33,7 +33,7 @@ This Tap provides an exhaustive range of versions for the following applications
 - main Casks
   - Consul `>= 1.0.0` and `<= 1.7.2`
   - Packer `>= 1.0.0` and `<= 1.5.5`
-  - Nomad `>= 0.8.0-rc1` and `<= 0.11.0-rc1`
+  - Nomad `>= 0.8.0-rc1` and `<= 0.11.0`
   - Vagrant `>= 1.8.0` and `<= 2.2.7`
   - Vault `>= 0.7.0` and `<= 1.4.0`
 - misc. Casks
@@ -62,7 +62,7 @@ brew cask install vagrant@1.8.0
 
 The [operatehappy/homebrew-tools](https://github.com/operatehappy/homebrew-tools) repository includes _tools_ that assist with the generation of _Casks_ for this and other [@operatehappy-maintained Taps](https://github.com/search?q=org%3Aoperatehappy+homebrew-tap).
 
-The `generate-casks.sh` and `verify-casks.sh` scripts expect the `operatehappy/homebrew-tools` to be available on the same level as this repository.
+The `generate-casks.sh` and `verify-casks.sh` scripts expect the `operatehappy/homebrew-tools` repository to be available on the same level as this repository.
 
 ### Adding or Updating Casks
 
@@ -76,7 +76,7 @@ Your contribution may be for a different product and version, but the steps rema
 
 - The `generate-casks.sh` helper will parse the `VERSION.sh` file and retrieve the _checksum_ for Vagrant `1.9.9`
 
-- Use `install-casks.sh vagrant` to verify installability of the newly generated Vagrant Cask
+- Use `verify-casks.sh vagrant` to verify installability of the newly generated Vagrant Cask
 
   - This helper will carry out the following steps:
 
