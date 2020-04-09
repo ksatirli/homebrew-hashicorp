@@ -1,16 +1,16 @@
-cask 'vagrant@%%PRODUCT_VERSION%%' do
-  version '%%PRODUCT_VERSION%%'
-  sha256 '%%PRODUCT_CHECKSUM%%'
+cask '%%BINARY%%@%%VERSION%%' do
+  version '%%VERSION%%'
+  sha256 '%%CHECKSUM%%'
 
   # releases.hashicorp.com was verified as official when first introduced to the cask
-  url 'https://releases.hashicorp.com/vagrant/%%PRODUCT_VERSION%%/vagrant_%%PRODUCT_VERSION%%%%PRODUCT_ARCHITECTURE%%.%%PRODUCT_FILE_EXTENSION%%'
-  appcast 'https://github.com/hashicorp/vagrant/releases.atom'
-  name 'Vagrant'
-  homepage 'https://www.vagrantup.com/'
+  url '%%PACKAGE_PROTOCOL%%://%%PACKAGE_HOST%%/%%BINARY%%/%%VERSION%%/%%PACKAGE_PATH%%'
+  appcast 'https://github.com/hashicorp/%%BINARY%%/releases.atom'
+  name '%%NAME%%'
+  homepage '%%HOMEPAGE%%'
 
-  conflicts_with cask: 'vagrant'
+  conflicts_with cask: '%%BINARY%%'
 
-  pkg 'vagrant.pkg'%%PRODUCT_FLAGS%%
+  pkg 'vagrant.pkg'%%FLAGS%%
 
   uninstall script:  {
                        executable: 'uninstall.tool',
