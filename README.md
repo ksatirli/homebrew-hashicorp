@@ -42,6 +42,7 @@ This Tap provides an exhaustive range of versions for the following applications
   - `consul-template` `>= 0.1.0` and `<= 0.25.0`
   - `envconsul` `>= 0.1.0` and `<= 0.9.2`
   - `sentinel` `>= 0.10.0` and `<= 0.15.1`
+  - `nomad-autoscaler` `>= 0.0.1` and `<= 0.0.2`
 
 Contrary to the upstream [homebrew-core](https://github.com/Homebrew/homebrew-core/) repository, this Tap uses _pre-built_ binaries as available via [releases.hashicorp.com](https://releases.hashicorp.com/).
 
