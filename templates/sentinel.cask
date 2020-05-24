@@ -1,0 +1,13 @@
+cask '%%BINARY%%@%%VERSION%%' do
+  version '%%VERSION%%'
+  sha256 '%%CHECKSUM%%'
+
+  url '%%PACKAGE_PROTOCOL%%://%%PACKAGE_HOST%%/%%BINARY%%/%%VERSION%%/%%PACKAGE_PATH%%'
+  name '%%BINARY%%'
+  homepage 'https://www.hashicorp.com/%%BINARY%%/'
+
+  auto_updates false
+  conflicts_with formula: '%%BINARY%%'
+
+  binary '%%BINARY%%'
+end

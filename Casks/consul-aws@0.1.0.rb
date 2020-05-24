@@ -9,6 +9,7 @@ cask 'consul-aws@0.1.0' do
   homepage 'https://github.com/hashicorp/consul-aws'
 
   auto_updates false
+  conflicts_with formula: 'consul-aws'
 
   binary 'consul-aws'
 end

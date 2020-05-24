@@ -2,69 +2,90 @@
 
 set -e
 
-# shellcheck source=./helpers/FUNCTIONS.sh
-. "./helpers/FUNCTIONS.sh"
+# shellcheck source=./VERSIONS.sh
+. "./VERSIONS.sh"
+
+# shellcheck source=../homebrew-tools/FUNCTIONS.sh
+. "../homebrew-tools/FUNCTIONS.sh"
 
 case "${1}" in
   consul)
     for VERSION in "${CONSUL_1XX[@]}"; do
-      install_and_test_cask "consul" "${VERSION}"
+      NAME="${1}"
+      verify_cask
     done
     ;;
 
   consul-aws)
     for VERSION in "${CONSUL_AWS_0XX[@]}"; do
-      install_and_test_cask "consul-aws" "${VERSION}"
+      NAME="${1}"
+      verify_cask
     done
     ;;
 
   consul-template)
     for VERSION in "${CONSUL_TEMPLATE_0XX[@]}"; do
-      install_and_test_cask "consul-template" "${VERSION}"
+      NAME="${1}"
+      verify_cask
     done
     ;;
 
   envconsul)
     for VERSION in "${ENVCONSUL_0XX[@]}"; do
-      install_and_test_cask "envconsul" "${VERSION}"
+      NAME="${1}"
+      verify_cask
     done
     ;;
 
   nomad)
     for VERSION in "${NOMAD_0XX[@]}"; do
-      install_and_test_cask "nomad" "${VERSION}"
+      NAME="${1}"
+      verify_cask
     done
     ;;
 
-  sentinel)
-    for VERSION in "${SENTINEL_0XX[@]}"; do
-      install_and_test_cask "sentinel" "${VERSION}"
+  nomad-autoscaler)
+    for VERSION in "${NOMAD_AUTOSCALER_0XX[@]}"; do
+      NAME="${1}"
+      verify_cask
     done
     ;;
 
   packer)
     for VERSION in "${PACKER_1XX[@]}"; do
-      install_and_test_cask "packer" "${VERSION}"
+      NAME="${1}"
+      verify_cask
+    done
+    ;;
+
+  sentinel)
+    for VERSION in "${SENTINEL_0XX[@]}"; do
+      NAME="${1}"
+      verify_cask
     done
     ;;
 
   vagrant)
     for VERSION in "${VAGRANT_1XX[@]}"; do
-      install_and_test_cask "vagrant" "${VERSION}"
+      NAME="${1}"
+      verify_cask
     done
 
     for VERSION in "${VAGRANT_2XX[@]}"; do
-      install_and_test_cask "vagrant" "${VERSION}"
+      NAME="${1}"
+      verify_cask
     done
     ;;
 
   vault)
     for VERSION in "${VAULT_0XX[@]}"; do
-      install_and_test_cask "vault" "${VERSION}"
+      NAME="${1}"
+      verify_cask
     done
 
     for VERSION in "${VAULT_1XX[@]}"; do
-      install_and_test_cask "vault" "${VERSION}"
+      NAME="${1}"
+      verify_cask
     done
     ;;
 
