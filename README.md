@@ -31,7 +31,7 @@ brew tap operatehappy/homebrew-hashicorp
 This Tap provides an exhaustive range of versions for the following applications:
 
 - main Casks
-  - Consul `>= 1.0.0` and `<= 1.7.2`
+  - Consul `>= 1.0.0` and `<= 1.8.0`
   - Packer `>= 1.0.0` and `<= 1.5.5`
   - Nomad `>= 0.8.0-rc1` and `<= 0.11.0`
   - Vagrant `>= 1.8.0` and `<= 2.2.7`
