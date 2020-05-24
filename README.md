@@ -38,7 +38,7 @@ This Tap provides an exhaustive range of versions for the following applications
   - Vault `>= 0.7.0` and `<= 1.4.0`
 - misc. Casks
   - `consul-aws` `>= 0.1.0` and `<= 0.1.2`
-  - `consul-template` `>= 0.1.0` and `<= 0.9.2`
+  - `consul-template` `>= 0.1.0` and `<= 0.25.0`
   - `envconsul` `>= 0.1.0` and `<= 0.9.2`
   - `sentinel` `>= 0.10.0` and `<= 0.15.1`
 
