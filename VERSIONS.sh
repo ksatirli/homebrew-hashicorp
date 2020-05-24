@@ -171,8 +171,8 @@ NOMAD_010X_PREFIXED=("0.10.0-beta1" "0.10.0-rc1" "0.10.0" "0.10.1" "0.10.2-rc1" 
 NOMAD_010X_NONPREFIXED=("0.10.3" "0.10.4-rc1" "0.10.4" "0.10.5")
 NOMAD_010X=("${NOMAD_010X_PREFIXED[@]}" "${NOMAD_010X_NONPREFIXED[@]}")
 
-# released between 2019-10 and 2020-04
-NOMAD_011X=("0.11.0-beta1" "0.11.0-beta2" "0.11.0-rc1" "0.11.0")
+# released between 2019-10 and 2020-05
+NOMAD_011X=("0.11.0-beta1" "0.11.0-beta2" "0.11.0-rc1" "0.11.0" "0.11.1" "0.11.2")
 
 NOMAD_0XX=("${NOMAD_08X[@]}" "${NOMAD_09X[@]}" "${NOMAD_010X[@]}" "${NOMAD_011X[@]}")
 

@@ -36,6 +36,7 @@ This Tap provides an exhaustive range of versions for the following applications
   - Nomad `>= 0.8.0-rc1` and `<= 0.11.0`
   - Vagrant `>= 1.8.0` and `<= 2.2.7`
   - Vault `>= 0.7.0` and `<= 1.4.0`
+  - Nomad `>= 0.8.0-rc1` and `<= 0.11.2`
 - misc. Casks
   - `consul-aws` `>= 0.1.0` and `<= 0.1.2`
   - `consul-template` `>= 0.1.0` and `<= 0.25.0`
