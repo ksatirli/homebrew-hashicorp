@@ -1,9 +1,9 @@
-cask 'vault@1.4.0' do
-  version '1.4.0'
-  sha256 '86f25f32f8fd7664e91b1fe04d23b864e9d35034dd4ccd10770656858e9845ca'
+cask 'vault@1.3.6' do
+  version '1.3.6'
+  sha256 'fcaeaaed1a05466563461377adea69f1404d68698b80fdf78ebb7b32c4d2354e'
 
   # releases.hashicorp.com was verified as official when first introduced to the cask
-  url 'https://releases.hashicorp.com/vault/1.4.0/vault_1.4.0_darwin_amd64.zip'
+  url 'https://releases.hashicorp.com/vault/1.3.6/vault_1.3.6_darwin_amd64.zip'
   appcast 'https://github.com/hashicorp/vault/releases.atom'
   name 'Vault'
   homepage 'https://www.vaultproject.io/'

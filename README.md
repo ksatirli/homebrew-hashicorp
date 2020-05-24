@@ -31,16 +31,17 @@ brew tap operatehappy/homebrew-hashicorp
 This Tap provides an exhaustive range of versions for the following applications:
 
 - main Casks
-  - Consul `>= 1.0.0` and `<= 1.7.2`
-  - Packer `>= 1.0.0` and `<= 1.5.5`
-  - Nomad `>= 0.8.0-rc1` and `<= 0.11.0`
-  - Vagrant `>= 1.8.0` and `<= 2.2.7`
-  - Vault `>= 0.7.0` and `<= 1.4.0`
+  - Consul `>= 1.0.0` and `<= 1.8.0`
+  - Packer `>= 1.0.0` and `<= 1.5.6`
+  - Nomad `>= 0.8.0-rc1` and `<= 0.11.2`
+  - Vagrant `>= 1.8.0` and `<= 2.2.9`
+  - Vault `>= 0.7.0` and `<= 1.4.2`
 - misc. Casks
   - `consul-aws` `>= 0.1.0` and `<= 0.1.2`
-  - `consul-template` `>= 0.1.0` and `<= 0.9.2`
+  - `consul-template` `>= 0.1.0` and `<= 0.25.0`
   - `envconsul` `>= 0.1.0` and `<= 0.9.2`
-  - `sentinel` `>= 0.10.0` and `<= 0.15.1`
+  - `nomad-autoscaler` `>= 0.0.1` and `<= 0.0.2`
+  - `sentinel` `>= 0.10.0` and `<= 0.15.5`
 
 Contrary to the upstream [homebrew-core](https://github.com/Homebrew/homebrew-core/) repository, this Tap uses _pre-built_ binaries as available via [releases.hashicorp.com](https://releases.hashicorp.com/).
 

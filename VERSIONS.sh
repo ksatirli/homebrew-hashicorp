@@ -51,13 +51,16 @@ CONSUL_14X=("1.4.0-rc1" "1.4.0" "1.4.0+ent" "1.4.1" "1.4.1+ent" "1.4.2+ent" "1.4
 # released between 2019-05 and 2019-07
 CONSUL_15X=("1.5.0+ent" "1.5.0" "1.5.1" "1.5.1+ent" "1.5.2+ent" "1.5.2" "1.5.3" "1.5.3+ent")
 
-# released between 2019-08 and 2020-02
-CONSUL_16X=("1.6.0-beta1" "1.6.0-beta2" "1.6.0-beta3" "1.6.0-rc1" "1.6.0" "1.6.0+ent-rc1" "1.6.0+ent-beta3" "1.6.0+ent-beta1" "1.6.0+ent" "1.6.0+ent-beta2" "1.6.1+ent" "1.6.1" "1.6.2" "1.6.2+ent" "1.6.3+ent" "1.6.3" "1.6.4+ent" "1.6.4")
+# released between 2019-08 and 2020-04
+CONSUL_16X=("1.6.0-beta1" "1.6.0-beta2" "1.6.0-beta3" "1.6.0-rc1" "1.6.0" "1.6.0+ent-rc1" "1.6.0+ent-beta3" "1.6.0+ent-beta1" "1.6.0+ent" "1.6.0+ent-beta2" "1.6.1+ent" "1.6.1" "1.6.2" "1.6.2+ent" "1.6.3+ent" "1.6.3" "1.6.4+ent" "1.6.4" "1.6.5" "1.6.5+ent")
 
-# released between 2020-02 and 2020-02
+# released between 2020-02 and 2020-05
 CONSUL_17X=("1.7.0-beta1" "1.7.0-beta2" "1.7.0-beta3" "1.7.0-beta4" "1.7.0" "1.7.0+ent-beta2" "1.7.0+ent-beta1" "1.7.0+ent-beta3" "1.7.0+ent" "1.7.0+ent-beta4" "1.7.1+ent" "1.7.1" "1.7.2" "1.7.2+ent")
 
-CONSUL_1XX=("${CONSUL_10X[@]}" "${CONSUL_11X[@]}" "${CONSUL_12X[@]}" "${CONSUL_13X[@]}" "${CONSUL_14X[@]}" "${CONSUL_15X[@]}" "${CONSUL_16X[@]}" "${CONSUL_17X[@]}")
+# released between 2020-05 and
+CONSUL_18X=("1.8.0-beta1" "1.8.0+ent-beta1" "1.8.0-beta2" "1.8.0+ent-beta2")
+
+CONSUL_1XX=("${CONSUL_10X[@]}" "${CONSUL_11X[@]}" "${CONSUL_12X[@]}" "${CONSUL_13X[@]}" "${CONSUL_14X[@]}" "${CONSUL_15X[@]}" "${CONSUL_16X[@]}" "${CONSUL_17X[@]}" "${CONSUL_18X[@]}")
 
 ########################################################################################################################
 #     CONSUL-AWS                                                                                                       #
@@ -93,7 +96,10 @@ CONSUL_TEMPLATE_023X=("0.23.0")
 # released in 2020-01
 CONSUL_TEMPLATE_024X=("0.24.0" "0.24.1")
 
-CONSUL_TEMPLATE_0XX=("${CONSUL_TEMPLATE_018X[@]}" "${CONSUL_TEMPLATE_019X[@]}" "${CONSUL_TEMPLATE_020X[@]}" "${CONSUL_TEMPLATE_021X[@]}" "${CONSUL_TEMPLATE_022X[@]}" "${CONSUL_TEMPLATE_023X[@]}" "${CONSUL_TEMPLATE_024X[@]}")
+# released in 2020-04
+CONSUL_TEMPLATE_025X=("0.25.0")
+
+CONSUL_TEMPLATE_0XX=("${CONSUL_TEMPLATE_018X[@]}" "${CONSUL_TEMPLATE_019X[@]}" "${CONSUL_TEMPLATE_020X[@]}" "${CONSUL_TEMPLATE_021X[@]}" "${CONSUL_TEMPLATE_022X[@]}" "${CONSUL_TEMPLATE_023X[@]}" "${CONSUL_TEMPLATE_024X[@]}" "${CONSUL_TEMPLATE_025X[@]}")
 
 ########################################################################################################################
 #     ENVCONSUL                                                                                                        #
@@ -165,14 +171,23 @@ NOMAD_010X_PREFIXED=("0.10.0-beta1" "0.10.0-rc1" "0.10.0" "0.10.1" "0.10.2-rc1" 
 NOMAD_010X_NONPREFIXED=("0.10.3" "0.10.4-rc1" "0.10.4" "0.10.5")
 NOMAD_010X=("${NOMAD_010X_PREFIXED[@]}" "${NOMAD_010X_NONPREFIXED[@]}")
 
-# released between 2019-10 and 2020-04
-NOMAD_011X=("0.11.0-beta1" "0.11.0-beta2" "0.11.0-rc1" "0.11.0")
+# released between 2019-10 and 2020-05
+NOMAD_011X=("0.11.0-beta1" "0.11.0-beta2" "0.11.0-rc1" "0.11.0" "0.11.1" "0.11.2")
 
 NOMAD_0XX=("${NOMAD_08X[@]}" "${NOMAD_09X[@]}" "${NOMAD_010X[@]}" "${NOMAD_011X[@]}")
 
 # shorthands for Nomad versions with and without prefix in checksums file
 NOMAD_PREFIXED=("${NOMAD_08X[@]}" "${NOMAD_09X[@]}" "${NOMAD_010X_PREFIXED[@]}")
 NOMAD_NONPREFIXED=("${NOMAD_010X_NONPREFIXED[@]}" "${NOMAD_011X[@]}")
+
+########################################################################################################################
+#     NOMAD-AUTOSCALER                                                                                                 #
+########################################################################################################################
+
+# released in 2020-03
+NOMAD_AUTOSCALER_00X=("0.0.1-techpreview1" "0.0.1-techpreview2" "0.0.2")
+
+NOMAD_AUTOSCALER_0XX=("${NOMAD_AUTOSCALER_00X[@]}")
 
 ########################################################################################################################
 #     PACKER                                                                                                           #
@@ -229,8 +244,8 @@ PACKER_13X=("1.3.0" "1.3.1" "1.3.2" "1.3.3" "1.3.4" "1.3.5")
 # released between 2019-04 and 2019-10
 PACKER_14X=("1.4.0" "1.4.1" "1.4.2" "1.4.3" "1.4.4" "1.4.5")
 
-# released between 2019-12 and 2020-02
-PACKER_15X=("1.5.0" "1.5.1" "1.5.2" "1.5.3" "1.5.4" "1.5.5")
+# released between 2019-12 and 2020-05
+PACKER_15X=("1.5.0" "1.5.1" "1.5.2" "1.5.3" "1.5.4" "1.5.5" "1.5.6")
 
 PACKER_1XX=("${PACKER_10X[@]}" "${PACKER_11X[@]}" "${PACKER_12X[@]}" "${PACKER_13X[@]}" "${PACKER_14X[@]}" "${PACKER_15X[@]}")
 
@@ -253,8 +268,8 @@ SENTINEL_013X=("0.13.0" "0.13.1")
 # released between 2019-12 and 2020-02
 SENTINEL_014X=("0.14.0" "0.14.1" "0.14.2" "0.14.3" "0.14.4")
 
-# released in 2020-03 and
-SENTINEL_015X=("0.15.0" "0.15.1")
+# released between 2020-03 and 2020-05
+SENTINEL_015X=("0.15.0" "0.15.1" "0.15.2" "0.15.3" "0.15.4" "0.15.5")
 
 SENTINEL_0XX=("${SENTINEL_010X[@]}" "${SENTINEL_011X[@]}" "${SENTINEL_012X[@]}" "${SENTINEL_013X[@]}" "${SENTINEL_014X[@]}" "${SENTINEL_015X[@]}")
 
@@ -289,8 +304,8 @@ VAGRANT_20X=("2.0.0" "2.0.1" "2.0.2" "2.0.3" "2.0.4")
 # released between 2018-05 and 2018-09
 VAGRANT_21X=("2.1.0" "2.1.1" "2.1.2" "2.1.3" "2.1.4" "2.1.5")
 
-# released between 2018-10 and 2020-01
-VAGRANT_22X=("2.2.0" "2.2.1" "2.2.2" "2.2.3" "2.2.4" "2.2.5" "2.2.6" "2.2.7")
+# released between 2018-10 and 2020-05
+VAGRANT_22X=("2.2.0" "2.2.1" "2.2.2" "2.2.3" "2.2.4" "2.2.5" "2.2.6" "2.2.7" "2.2.8" "2.2.9")
 
 VAGRANT_2XX=("${VAGRANT_20X[@]}" "${VAGRANT_21X[@]}" "${VAGRANT_22X[@]}")
 
@@ -331,11 +346,11 @@ VAULT_12X=("${VAULT_12X_NONPREFIXED[@]}" "${VAULT_12X_PREFIXED[@]}")
 
 # released between 2019-11 and 2020-03
 # versions `1.3.0-beta1+ent.hsm`, `1.3.0+ent.hsm`, `1.3.1+ent.hsm`, `1.3.2+ent.hsm`, `1.3.3+ent.hsm`, and `1.3.4+ent.hsm` were not released for macOS and are therefore omitted
-VAULT_13X=("1.3.0" "1.3.0-beta1" "1.3.0-beta1+ent" "1.3.0+ent" "1.3.1" "1.3.1+ent" "1.3.2" "1.3.2+ent" "1.3.3" "1.3.3+ent" "1.3.4" "1.3.4+ent")
+VAULT_13X=("1.3.0" "1.3.0-beta1" "1.3.0-beta1+ent" "1.3.0+ent" "1.3.1" "1.3.1+ent" "1.3.2" "1.3.2+ent" "1.3.3" "1.3.3+ent" "1.3.4" "1.3.4+ent" "1.3.5" "1.3.4+ent")
 
 # released between 2020-02 and 2020-04
 # versions `1.4.0-beta1+ent.hsm` and `1.4.0-rc1+ent.hsm` were not released for macOS and are therefore omitted
-VAULT_14X=("1.4.0-beta1" "1.4.0-beta1+ent" "1.4.0-rc1" "1.4.0-rc1+ent" "1.4.0")
+VAULT_14X=("1.4.0-beta1" "1.4.0-beta1+ent" "1.4.0-rc1" "1.4.0-rc1+ent" "1.4.0" "1.4.1"  "1.4.1+ent" "1.4.2"  "1.4.2+ent")
 
 VAULT_0XX=("${VAULT_07X[@]}" "${VAULT_08X[@]}" "${VAULT_09X[@]}" "${VAULT_010X[@]}" "${VAULT_011X[@]}")
 VAULT_1XX=("${VAULT_10X[@]}" "${VAULT_11X[@]}" "${VAULT_12X[@]}" "${VAULT_13X[@]}" "${VAULT_14X[@]}")
