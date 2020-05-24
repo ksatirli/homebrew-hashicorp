@@ -268,8 +268,8 @@ SENTINEL_013X=("0.13.0" "0.13.1")
 # released between 2019-12 and 2020-02
 SENTINEL_014X=("0.14.0" "0.14.1" "0.14.2" "0.14.3" "0.14.4")
 
-# released in 2020-03 and
-SENTINEL_015X=("0.15.0" "0.15.1")
+# released between 2020-03 and 2020-05
+SENTINEL_015X=("0.15.0" "0.15.1" "0.15.2" "0.15.3" "0.15.4" "0.15.5")
 
 SENTINEL_0XX=("${SENTINEL_010X[@]}" "${SENTINEL_011X[@]}" "${SENTINEL_012X[@]}" "${SENTINEL_013X[@]}" "${SENTINEL_014X[@]}" "${SENTINEL_015X[@]}")
 
