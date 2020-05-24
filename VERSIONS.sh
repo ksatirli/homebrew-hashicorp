@@ -96,7 +96,10 @@ CONSUL_TEMPLATE_023X=("0.23.0")
 # released in 2020-01
 CONSUL_TEMPLATE_024X=("0.24.0" "0.24.1")
 
-CONSUL_TEMPLATE_0XX=("${CONSUL_TEMPLATE_018X[@]}" "${CONSUL_TEMPLATE_019X[@]}" "${CONSUL_TEMPLATE_020X[@]}" "${CONSUL_TEMPLATE_021X[@]}" "${CONSUL_TEMPLATE_022X[@]}" "${CONSUL_TEMPLATE_023X[@]}" "${CONSUL_TEMPLATE_024X[@]}")
+# released in 2020-04
+CONSUL_TEMPLATE_025X=("0.25.0")
+
+CONSUL_TEMPLATE_0XX=("${CONSUL_TEMPLATE_018X[@]}" "${CONSUL_TEMPLATE_019X[@]}" "${CONSUL_TEMPLATE_020X[@]}" "${CONSUL_TEMPLATE_021X[@]}" "${CONSUL_TEMPLATE_022X[@]}" "${CONSUL_TEMPLATE_023X[@]}" "${CONSUL_TEMPLATE_024X[@]}" "${CONSUL_TEMPLATE_025X[@]}")
 
 ########################################################################################################################
 #     ENVCONSUL                                                                                                        #
