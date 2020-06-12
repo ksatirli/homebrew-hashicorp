@@ -16,6 +16,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
+      - name: Cancel previous runs
+        uses: Homebrew/actions/cancel-previous-runs@master
+
       - name: Set up brew test-bot environment
         run: |
           brew update
@@ -26,11 +29,11 @@ jobs:
         env:
           HOMEBREW_TAP_DIR: "/usr/local/Homebrew/Library/Taps/operatehappy/homebrew-hashicorp"
 
-      - name: Run brew test-bot
-        run: |
-          brew test-bot --fail-fast
-        env:
-          HOMEBREW_TAP_DIR: "/usr/local/Homebrew/Library/Taps/operatehappy/homebrew-hashicorp"
+#      - name: Run brew test-bot
+#        run: |
+#          brew test-bot --fail-fast
+#        env:
+#          HOMEBREW_TAP_DIR: "/usr/local/Homebrew/Library/Taps/operatehappy/homebrew-hashicorp"
 
       - name: Run brew cask audit
         run: |
