@@ -349,11 +349,11 @@ VAULT_12X=("${VAULT_12X_NONPREFIXED[@]}" "${VAULT_12X_PREFIXED[@]}")
 
 # released between 2019-11 and 2020-03
 # versions `1.3.0-beta1+ent.hsm`, `1.3.0+ent.hsm`, `1.3.1+ent.hsm`, `1.3.2+ent.hsm`, `1.3.3+ent.hsm`, and `1.3.4+ent.hsm` were not released for macOS and are therefore omitted
-VAULT_13X=("1.3.0" "1.3.0-beta1" "1.3.0-beta1+ent" "1.3.0+ent" "1.3.1" "1.3.1+ent" "1.3.2" "1.3.2+ent" "1.3.3" "1.3.3+ent" "1.3.4" "1.3.4+ent" "1.3.5" "1.3.4+ent")
+VAULT_13X=("1.3.0" "1.3.0-beta1" "1.3.0-beta1+ent" "1.3.0+ent" "1.3.1" "1.3.1+ent" "1.3.2" "1.3.2+ent" "1.3.3" "1.3.3+ent" "1.3.4" "1.3.4+ent")
 
 # released between 2020-02 and 2020-04
 # versions `1.4.0-beta1+ent.hsm` and `1.4.0-rc1+ent.hsm` were not released for macOS and are therefore omitted
-VAULT_14X=("1.4.0-beta1" "1.4.0-beta1+ent" "1.4.0-rc1" "1.4.0-rc1+ent" "1.4.0" "1.4.1"  "1.4.1+ent" "1.4.2"  "1.4.2+ent")
+VAULT_14X=("1.4.0-beta1" "1.4.0-beta1+ent" "1.4.0-rc1" "1.4.0-rc1+ent" "1.4.0")
 
 VAULT_0XX=("${VAULT_07X[@]}" "${VAULT_08X[@]}" "${VAULT_09X[@]}" "${VAULT_010X[@]}" "${VAULT_011X[@]}")
 VAULT_1XX=("${VAULT_10X[@]}" "${VAULT_11X[@]}" "${VAULT_12X[@]}" "${VAULT_13X[@]}" "${VAULT_14X[@]}")
