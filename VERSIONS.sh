@@ -58,7 +58,7 @@ CONSUL_16X=("1.6.0-beta1" "1.6.0-beta2" "1.6.0-beta3" "1.6.0-rc1" "1.6.0" "1.6.0
 CONSUL_17X=("1.7.0-beta1" "1.7.0-beta2" "1.7.0-beta3" "1.7.0-beta4" "1.7.0" "1.7.0+ent-beta2" "1.7.0+ent-beta1" "1.7.0+ent-beta3" "1.7.0+ent" "1.7.0+ent-beta4" "1.7.1" "1.7.1+ent" "1.7.2" "1.7.2+ent" "1.7.3" "1.7.3+ent" "1.7.4" "1.7.4+ent")
 
 # released between 2020-05 and
-CONSUL_18X=("1.8.0-beta1" "1.8.0+ent-beta1" "1.8.0-beta2" "1.8.0+ent-beta2")
+CONSUL_18X=("1.8.0-beta1" "1.8.0+ent-beta1" "1.8.0-beta2" "1.8.0+ent-beta2" "1.8.0-rc1" "1.8.0+ent-rc1" "1.8.0" "1.8.0+ent")
 
 CONSUL_1XX=("${CONSUL_10X[@]}" "${CONSUL_11X[@]}" "${CONSUL_12X[@]}" "${CONSUL_13X[@]}" "${CONSUL_14X[@]}" "${CONSUL_15X[@]}" "${CONSUL_16X[@]}" "${CONSUL_17X[@]}" "${CONSUL_18X[@]}")
 
