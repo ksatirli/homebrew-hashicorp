@@ -97,7 +97,7 @@ CONSUL_TEMPLATE_023X=("0.23.0")
 CONSUL_TEMPLATE_024X=("0.24.0" "0.24.1")
 
 # released in 2020-04
-CONSUL_TEMPLATE_025X=("0.25.0")
+CONSUL_TEMPLATE_025X=("0.25.0" "0.25.1")
 
 CONSUL_TEMPLATE_0XX=("${CONSUL_TEMPLATE_018X[@]}" "${CONSUL_TEMPLATE_019X[@]}" "${CONSUL_TEMPLATE_020X[@]}" "${CONSUL_TEMPLATE_021X[@]}" "${CONSUL_TEMPLATE_022X[@]}" "${CONSUL_TEMPLATE_023X[@]}" "${CONSUL_TEMPLATE_024X[@]}" "${CONSUL_TEMPLATE_025X[@]}")
 
@@ -129,10 +129,12 @@ ENVCONSUL_07X=("0.7.0" "0.7.1" "0.7.2" "0.7.3")
 # released in 2019-06
 ENVCONSUL_08X=("0.8.0")
 
-# released between 2019-08 and 2020-01
-ENVCONSUL_09X=("0.9.0" "0.9.1" "0.9.2")
+# released between 2019-08 and 2020-04
+ENVCONSUL_09X=("0.9.0" "0.9.1" "0.9.2" "0.9.3")
 
-ENVCONSUL_0XX=("${ENVCONSUL_01X[@]}" "${ENVCONSUL_02X[@]}" "${ENVCONSUL_03X[@]}" "${ENVCONSUL_04X[@]}" "${ENVCONSUL_05X[@]}" "${ENVCONSUL_06X[@]}" "${ENVCONSUL_07X[@]}" "${ENVCONSUL_08X[@]}" "${ENVCONSUL_09X[@]}")
+ENVCONSUL_010X=("0.10.0")
+
+ENVCONSUL_0XX=("${ENVCONSUL_01X[@]}" "${ENVCONSUL_02X[@]}" "${ENVCONSUL_03X[@]}" "${ENVCONSUL_04X[@]}" "${ENVCONSUL_05X[@]}" "${ENVCONSUL_06X[@]}" "${ENVCONSUL_07X[@]}" "${ENVCONSUL_08X[@]}" "${ENVCONSUL_09X[@]}" "${ENVCONSUL_010X[@]}")
 
 ########################################################################################################################
 #     NOMAD                                                                                                            #
