@@ -349,21 +349,23 @@ VAULT_11X=("1.1.0" "1.1.0-beta1" "1.1.0-beta2" "1.1.1" "1.1.2" "1.1.3" "1.1.4" "
 
 # released between 2019-07 and 2019-11
 # versions `1.2.3+ent.hsm` and `1.2.4+ent.hsm` were not released for macOS and are therefore omitted
-VAULT_12X_NONPREFIXED=("1.2.0" "1.2.0-beta1" "1.2.0-beta2" "1.2.0-rc1" "1.2.1" "1.2.2" "1.2.3" "1.2.4" "1.2.4+ent")
+VAULT_12X_NONPREFIXED=("1.2.0" "1.2.0-beta1" "1.2.0-beta2" "1.2.0-rc1" "1.2.1" "1.2.2" "1.2.3" "1.2.4" "1.2.4+ent" "1.2.5" "1.2.5+ent" "1.2.6" "1.2.6+ent" "1.2.6.1+ent" "1.2.7" "1.2.7+ent")
 VAULT_12X_PREFIXED=("1.2.3+ent")
 VAULT_12X=("${VAULT_12X_NONPREFIXED[@]}" "${VAULT_12X_PREFIXED[@]}")
 
 # released between 2019-11 and 2020-03
 # versions `1.3.0-beta1+ent.hsm`, `1.3.0+ent.hsm`, `1.3.1+ent.hsm`, `1.3.2+ent.hsm`, `1.3.3+ent.hsm`, and `1.3.4+ent.hsm` were not released for macOS and are therefore omitted
-VAULT_13X=("1.3.0" "1.3.0-beta1" "1.3.0-beta1+ent" "1.3.0+ent" "1.3.1" "1.3.1+ent" "1.3.2" "1.3.2+ent" "1.3.3" "1.3.3+ent" "1.3.4" "1.3.4+ent")
+VAULT_13X=("1.3.0" "1.3.0-beta1" "1.3.0-beta1+ent" "1.3.0+ent" "1.3.1" "1.3.1+ent" "1.3.2" "1.3.2+ent" "1.3.3" "1.3.3+ent" "1.3.4" "1.3.4+ent" "1.3.5" "1.3.5+ent" "1.3.6" "1.3.6+ent" "1.3.7" "1.3.7+ent" "1.3.8" "1.3.8+ent" "1.3.9" "1.3.9+ent" "1.3.9.1+ent" "1.3.10" "1.3.10+ent")
 
 # released between 2020-02 and 2020-04
 # versions `1.4.0-beta1+ent.hsm` and `1.4.0-rc1+ent.hsm` were not released for macOS and are therefore omitted
-VAULT_14X=("1.4.0-beta1" "1.4.0-beta1+ent" "1.4.0-rc1" "1.4.0-rc1+ent" "1.4.0")
+VAULT_14X=("1.4.0-beta1" "1.4.0-beta1+ent" "1.4.0-rc1" "1.4.0-rc1+ent" "1.4.0" "1.4.1" "1.4.1+ent" "1.4.2" "1.4.2+ent" "1.4.3" "1.4.3+ent" "1.4.4" "1.4.4+ent" "1.4.5" "1.4.5+ent" "1.4.5.1+ent" "1.4.6" "1.4.6+ent")
+
+VAULT_15X=("1.5.0-rc" "1.5.0-rc+ent" "1.5.0" "1.5.0+ent" "1.5.1" "1.5.1+ent" "1.5.2" "1.5.2+ent" "1.5.2.1+ent" "1.5.3" "1.5.3+ent")
 
 VAULT_0XX=("${VAULT_07X[@]}" "${VAULT_08X[@]}" "${VAULT_09X[@]}" "${VAULT_010X[@]}" "${VAULT_011X[@]}")
-VAULT_1XX=("${VAULT_10X[@]}" "${VAULT_11X[@]}" "${VAULT_12X[@]}" "${VAULT_13X[@]}" "${VAULT_14X[@]}")
+VAULT_1XX=("${VAULT_10X[@]}" "${VAULT_11X[@]}" "${VAULT_12X[@]}" "${VAULT_13X[@]}" "${VAULT_14X[@]}" "${VAULT_15X[@]}")
 
 # shorthands for Vault versions with and without prefix in checksums file
-VAULT_NONPREFIXED=("${VAULT_0XX[@]}" "${VAULT_10X[@]}" "${VAULT_11X[@]}" "${VAULT_12X_NONPREFIXED[@]}" "${VAULT_13X[@]}" "${VAULT_14X[@]}")
+VAULT_NONPREFIXED=("${VAULT_0XX[@]}" "${VAULT_10X[@]}" "${VAULT_11X[@]}" "${VAULT_12X_NONPREFIXED[@]}" "${VAULT_13X[@]}" "${VAULT_14X[@]}" "${VAULT_15X[@]}")
 VAULT_PREFIXED=("${VAULT_12X_PREFIXED[@]}")
