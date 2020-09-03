@@ -174,13 +174,15 @@ NOMAD_010X_NONPREFIXED=("0.10.3" "0.10.4-rc1" "0.10.4" "0.10.5")
 NOMAD_010X=("${NOMAD_010X_PREFIXED[@]}" "${NOMAD_010X_NONPREFIXED[@]}")
 
 # released between 2019-10 and 2020-05
-NOMAD_011X=("0.11.0-beta1" "0.11.0-beta2" "0.11.0-rc1" "0.11.0" "0.11.1" "0.11.2" "0.11.3")
+NOMAD_011X=("0.11.0-beta1" "0.11.0-beta2" "0.11.0-rc1" "0.11.0" "0.11.1" "0.11.2" "0.11.3" "0.11.4")
 
-NOMAD_0XX=("${NOMAD_08X[@]}" "${NOMAD_09X[@]}" "${NOMAD_010X[@]}" "${NOMAD_011X[@]}")
+NOMAD_012X=("0.12.0-beta1" "0.12.0-beta2" "0.12.0-beta2+ent" "0.12.0-rc1" "0.12.0-rc1+ent" "0.12.0+ent" "0.12.0" "0.12.1+ent" "0.12.1" "0.12.2+ent" "0.12.2" "0.12.3+ent" "0.12.3" "0.12.4-rc1" "0.12.4-rc1+ent")
+
+NOMAD_0XX=("${NOMAD_08X[@]}" "${NOMAD_09X[@]}" "${NOMAD_010X[@]}" "${NOMAD_011X[@]}" "${NOMAD_012X[@]}")
 
 # shorthands for Nomad versions with and without prefix in checksums file
 NOMAD_PREFIXED=("${NOMAD_08X[@]}" "${NOMAD_09X[@]}" "${NOMAD_010X_PREFIXED[@]}")
-NOMAD_NONPREFIXED=("${NOMAD_010X_NONPREFIXED[@]}" "${NOMAD_011X[@]}")
+NOMAD_NONPREFIXED=("${NOMAD_010X_NONPREFIXED[@]}" "${NOMAD_011X[@]}" "${NOMAD_012X[@]}")
 
 ########################################################################################################################
 #     NOMAD-AUTOSCALER                                                                                                 #
