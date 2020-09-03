@@ -191,7 +191,9 @@ NOMAD_NONPREFIXED=("${NOMAD_010X_NONPREFIXED[@]}" "${NOMAD_011X[@]}" "${NOMAD_01
 # released in 2020-03
 NOMAD_AUTOSCALER_00X=("0.0.1-techpreview1" "0.0.1-techpreview2" "0.0.2")
 
-NOMAD_AUTOSCALER_0XX=("${NOMAD_AUTOSCALER_00X[@]}")
+NOMAD_AUTOSCALER_01X=("0.1.0")
+
+NOMAD_AUTOSCALER_0XX=("${NOMAD_AUTOSCALER_00X[@]}" "${NOMAD_AUTOSCALER_01X[@]}")
 
 ########################################################################################################################
 #     PACKER                                                                                                           #
