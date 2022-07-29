@@ -1,3 +1,6 @@
+> **Head's up!**
+> This repository is not currently actively maintained. If you are interested in maintaining it, reach out to [@ksatirli](https://github.com/ksatirli).
+
 # Homebrew: HashiCorp
 
 > Homebrew Tap for HashiCorp Suite of Tools
