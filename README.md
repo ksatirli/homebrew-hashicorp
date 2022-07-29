@@ -1,4 +1,4 @@
-> **Head's up!**
+> **Warning**
 > This repository is not currently actively maintained. If you are interested in maintaining it, reach out to [@ksatirli](https://github.com/ksatirli).
 
 # Homebrew: HashiCorp
